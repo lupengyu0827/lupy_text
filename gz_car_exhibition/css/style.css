@@ -1,0 +1,472 @@
+@font-face
+{
+    font-family: STHeiti;
+   	src: url(font/STHeiti Medium.ttc);
+	src:url(font/STHeiti Medium.ttc) format('truetype'),
+    /*font-weight:bold;*/
+}
+body{
+	overflow: hidden;
+}
+
+.fl{
+	float: left;
+}
+.page1{
+	background-color: #016284;
+	/*background-image: url(../images/page2.jpg);*/
+	background-size: 100% 100%;
+}
+.page1 img{
+	/*background-image: url(../images/page1.jpg);*/
+	width: 10rem;
+	height: 19.333333rem;
+}
+.page2{
+	width: 100%;
+	height: 100%;
+	/*background-image: url(../images/page2.jpg);*/
+	background-size: 100% 100%;
+		
+}
+.page2 img{
+	width: 10rem;
+	height: 19.333333rem;
+}
+.page2_1{
+	width: 100%;
+	height: 100%;
+	/*background-image: url(../images/page2-1.jpg);*/
+	background-size: 100% 100%;
+	display: none;
+}
+
+.page2_date{
+	overflow: hidden;
+	height: 2.16rem;
+	position: absolute;
+	top: 11rem;
+}
+.page2_date_hours{
+	width: 2rem;
+	height: 2.16rem;
+	margin-left: 2.053333rem;
+	line-height: 2.16rem;
+	background-image: url(../images/hour.png);
+	background-size: 100% 100%;
+	color: #FFFFFF;
+    font-size: 0.7rem;
+}
+.page2_date_min{
+	width: 2rem;
+	height: 2.16rem;
+	line-height: 2.16rem;
+	background-image: url(../images/min.png);
+	background-size: 100% 100%;
+	color: #FFFFFF;
+    font-size: 0.7rem;
+}
+.page2_date_second{
+	width: 2rem;
+	height: 2.16rem;
+	line-height: 2.16rem;
+	background-image: url(../images/second.png);
+	background-size: 100% 100%;
+	color: #FFFFFF;
+    font-size: 0.7rem;
+}
+.page2_date p {
+	width: 1.7rem;
+	text-align: center;
+}
+
+.yszx_1_btn{
+	width: 4.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 3.533333rem;
+	left: 1.333333rem;
+}
+.jzyl_1_btn{
+	width: 4.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 5.866666rem;
+	right:1.333333rem ;
+	/*top: 2.333333rem;*/
+}
+.yxc_1_btn{
+	width: 4.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 8.199999rem;
+	left:1.333333rem ;
+}
+.spzx_1_btn{
+	width: 4.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 10.533332rem;
+	right:1.333333rem ;
+}
+.page2_1 a img {
+	width: 4.8rem;
+	height: 1.6rem;
+}
+
+
+
+/*       yskx.html        */
+#yskx{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/yskx_bg.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.imgList_bg{
+	width: 8.933333rem;
+	height: 10.133333rem;
+	background: #FFFFFF;
+	border-radius: 10px;
+	margin-left: 0.533333rem;
+	margin-top: 2.933333rem;
+	overflow: hidden;
+	position: relative;
+}
+.imgList_text{
+	font-family: STHeiti;
+	font-size: 0.32rem;
+	width: 8.4rem;
+	height: 2rem;
+	margin: auto;
+	margin-top: 0.506666rem;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.imgList_btnList{
+	width: 100%;
+	height: 0.8rem;
+	margin-top: 0.2rem;
+    position: absolute;
+    top: 9rem;
+}
+/*2018-11-12*/
+.imgList_btnList img {
+	width: 0.293333rem;
+	height: 0.533333rem;
+}
+.imgList_btnList img:first-child{
+	margin-left: 3.44rem;
+	margin-right: 1.466666rem;
+}
+.tabBar {
+	width: 9rem;
+	height: 1rem ;
+	/*margin-left: 0.533333rem;
+	margin-top: 0.533333rem;*/
+	position: absolute;
+	left: 0.533333rem;
+	top: 13.6rem;
+
+}
+.tabBar img {
+	width: 2.133333rem;
+	height: 0.8rem;
+}
+
+
+
+/*       imgList.html        */
+#imglist_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/yskx_bg.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.imglist{
+	/*width: 8.933333rem;*/
+	height: 10.133333rem;
+	margin-top: 2.933333rem;
+	margin-left: 0.533333rem;
+	overflow: hidden;
+}
+#LAY_demo1{
+	overflow: hidden;
+	overflow-y: scroll;
+	font-family: STHeiti;
+}
+.layui-flow-more {
+	width: 8.933333rem;
+	height: 0.5rem !important;
+	background: none;
+	float: left;
+}
+.layui-flow-more a cite {
+    background: none !important;
+    color: #FFFFFF !important;
+    padding: initial;
+}
+#LAY_demo1 li{
+	width: 4.4rem;
+	height: 4.7rem;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 0.133333rem;
+	margin-bottom: 0.133333rem;
+	border-radius: 10px;
+}
+#LAY_demo1 li img{
+	width: 4.4rem;
+	height: 3.306666rem;
+}
+#LAY_demo1 li p{
+	font-size: 0.32rem;
+	height: 0.4rem;
+	text-align: center;
+	margin-top: 0.133333rem;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+
+
+/*       videoList.html       */
+
+
+#videolist_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/yskx_bg.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.videolist{
+	/*width: 8.933333rem;*/
+	height: 10.133333rem;
+	margin-top: 2.933333rem;
+	margin-left: 0.533333rem;
+	overflow: hidden;
+}
+.videolist_one{
+	width: 8.933333rem;
+	height: 5.013333rem;
+	background-size: 100% 100%;
+}
+.videolist_one .play_btn{
+	margin-left: 4.093333rem;
+	margin-top: 2rem;
+}
+.videolist .play_btn {
+	width: 0.746666rem;
+	height: 0.746666rem;
+}
+#videoID{
+	display: none;
+	background: #000;
+	position: absolute;
+	z-index: 2;
+} 
+#LAY_demo2{
+	height: 4.853333rem;
+	margin-top: 0.266666rem;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#LAY_demo2 li{
+	width: 4.4rem;
+	height: 3.306666rem;
+	float: left;
+	margin-right: 0.133333rem;
+}
+#LAY_demo2 li p {
+	height: initial;
+	padding: 0.2rem 0.4rem;
+	width: 3.6rem;
+	background: #FFFFFF;
+	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+}
+.videolist_two{
+	width: 4.4rem;
+	height: 2.453333rem;
+	background-size: 100% 100%;
+	border-radius:10px 10px 0 0;
+}
+.videolist_two .play_btn {
+	margin-left: 1.813333rem;
+	margin-top: 0.853333rem;
+}
+
+/*         jzyl.html         */
+#jzyl_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/jzyl.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+.zqxi{
+	width: 3.466666rem;
+	height: 1.066666rem;
+	position: absolute;
+	top: 11.2rem;
+	left: 1.066666rem;
+}
+.sjxz{
+	width: 3.466666rem;
+	height: 1.066666rem;
+	top: 11.2rem;
+	right: 1.066666rem;
+	position: absolute;
+}
+
+/*         medal.html          */
+#medal_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/medal.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+.medal_list{
+	width: 100%;
+	height: 3rem;
+	margin-top: 4.8rem;
+}
+.medal_list img {
+	width: 2.133333rem;
+	height: 2.8rem;
+	margin-right: 0.72rem;
+}
+.medal_list img:first-child{
+	margin-left: 1.066666rem;
+}
+.medal_num{
+	width: 7.733333rem;
+	height: 2.32rem;
+	background-size: 100% 100%;
+}
+.medal_0{
+	width: 5.413333rem;
+	height: 1.866666rem;
+	position: absolute;
+	top: 8.733333rem;
+	left: 2.053333rem;
+	display: none;
+}
+.medal_2{
+    display: none;
+    width: 6.586666rem;
+    height: 1.786666rem;
+    position: absolute;
+    top: 8.8rem;
+    left: 1.6rem;
+}
+.medal_3{
+	width: 5.733333rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 8.933333rem;
+	left: 1.973333rem;
+	display: none;
+}
+.medal_1{
+	width: 6.586666rem;
+	height: 1.786666rem;
+	position: absolute;
+	top: 8.8rem;
+	left: 1.6rem;
+	display: none;
+}
+.back_index{
+	width: 3.52rem;
+	height: 1.066666rem;
+	position: absolute;
+	top: 12.8rem;
+	right: 1.066666rem;
+}
+.saoyisao{
+	width: 3.52rem;
+	height: 1.066666rem;
+	position: absolute;
+	top: 12.8rem;
+	left: 1.066666rem;
+}
+
+/*           view.html              */
+#view_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+/*              jzyl_view                 */
+#jzyl_view_bg{
+	width: 10rem;
+	height: 19.333333rem;
+	background-image: url(../images/jzyl_view.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+.view_main {
+	width: 8.933333rem;
+	height: 10.133333rem;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-top: 2.933333rem;
+	margin-left: 0.533333rem;
+}
+.view_close{
+	width: 0.613333rem;
+	height: 0.613333rem;
+	position: absolute;
+	top: 0.933333rem;
+	right: 0.533333rem;
+}
+.view_main .view_main_img{
+	width: 8.4rem;
+	height: 5.6rem;
+	margin-top: 0.266666rem;
+	margin-left: 0.266666rem;
+}
+.view_title {
+	font-size: 0.533333rem;
+	font-weight: bold;
+	margin-top: 0.533333rem;
+	margin-left: 0.266666rem;
+	margin-bottom: 0.533333rem;
+	width: 8.4rem;
+	height: 0.4rem;
+}
+.view_con{
+	margin-left: 0.266666rem;
+	width: 8.4rem;
+	height: 0.4rem;
+	max-height: 2.4rem;
+	font-size: 0.32rem;
+	overflow: hidden;
+}
+.zheBg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000000;
+	opacity: 0.8;
+	z-index: 9;
+}
+.zhe{
+	display: none;
+}
+.zhe img{
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+}

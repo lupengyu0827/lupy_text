@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		 <div class="swiper-container">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide page1">
+		      	<img src="images/page1.jpg"/>
+		      </div>
+		      <div class="swiper-slide ">
+		      	<div class="page2">
+		      		<img src="images/page2.jpg" alt="" />
+		      		<div class="page2_date">
+		      			<div class="page2_date_hours fl">
+		      				<p id="_h"></p>
+		      			</div>
+		      			<div class="page2_date_min fl">
+		      				<p id="_m"></p>
+		      			</div>
+		      			<div class="page2_date_second fl">
+		      				<p id="_s"></p>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="page2_1">
+		      		<img style="height: 19.333333rem;" src="images/page2-1.jpg"/>
+		      		<a class="yszx_1_btn" ><img src="images/yszx_1.png"/></a>
+		      		<a class="jzyl_1_btn" ><img src="images/jzyl_1.png"/></a>
+		      		<a class="yxc_1_btn" ><img src="images/yxc_1.png"/></a>
+		      		<a class="spzx_1_btn" ><img src="images/spzx_1.png"/></a>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	  	var mySwiper = new Swiper('.swiper-container',{
+	    	direction: 'vertical'
+	    	//direction: 'horizontal'
+	  	})
+	  	function countTime() {
+                var date = new Date();
+                var now = date.getTime();    
+                var time = "2018-11-11 18:14:00";
+				time = time.replace(/-/g,':').replace(' ',':');
+				time = time.split(':');
+				var endDate = new Date(time[0],(time[1]-1),time[2],time[3],time[4],time[5]);
+//              var endDate =new Date("2018,11,01,18,02,00");// Date.parse( "2018-11-01 18:02:00" ) // 设置截止时间
+                var end = endDate.getTime();
+                var leftTime = end - now; //时间差                              
+                var d, h, m, s, ms;
+                if(leftTime >= 0) {
+                    // d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                    h = Math.floor(leftTime / 1000 / 60 / 60);
+                    m = Math.floor(leftTime / 1000 / 60 % 60);
+                    s = Math.floor(leftTime / 1000 % 60);
+                    ms = Math.floor(leftTime % 1000);
+                    if(ms < 100) {
+                        ms = "0" + ms;
+                    }
+                    if(s < 10) {
+                        s = "0" + s;
+                    }
+                    if(m < 10) {
+                        m = "0" + m;
+                    }
+                    if(h < 10) {
+                        h = "0" + h;
+                    }
+                } else {
+                	$('.page2').hide();
+                	$('.page2_1').show();
+                	return;
+                    console.log('已截止');
+                }
+                //将倒计时赋值到div中
+                // document.getElementById("_d").innerHTML = d + "天";
+                document.getElementById("_h").innerHTML = h;
+                document.getElementById("_m").innerHTML = m;
+                document.getElementById("_s").innerHTML = s;
+                // document.getElementById("_ms").innerHTML = ms + "毫秒";
+                //递归每秒调用countTime方法，显示动态时间效果
+                var timer = setTimeout(countTime, 50);
+            }
+            countTime();
+	</script>
+</html>

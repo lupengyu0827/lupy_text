@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<title>够出色就上榜</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--  排行榜      -->
+		<div class="paihang" style="display: block;">
+			<img class="ph_title" src="images/paihangbang.png"/>
+			<div class="ph_list">
+				<ul>
+					<li class="ph_one">
+						<p class="ph_num"></p>
+						<p class="ph_name">Nan.</p>
+						<p class="ph_score">00:02.130</p>
+					</li>
+					<li class="ph_two">
+						<p class="ph_num"></p>
+						<p class="ph_name">刘梦然</p>
+						<p class="ph_score">00:02.135</p>
+					</li>
+					<li class="ph_three">
+						<p class="ph_num"></p>
+						<p class="ph_name">胡小雨</p>
+						<p class="ph_score">00:02.140</p>
+					</li>
+					<div class="ph_more">
+						
+					</div>
+				</ul>
+			</div>
+			<div class="ph_btn_list">
+				<img class="backIndex" src="images/back_index.png"/>
+				<img class="start" src="images/start.png"/>
+				<img class="page1_share" src="images/page1_share.png"/>
+			</div>
+			<div class="prompt2">
+				<div class="promptBg"></div>
+				<img src="images/share.png"/>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var score = -1;
+		$('.start').bind('click',function(){
+			window.location.href = _host+'/api/benz/color'
+		})
+		$('.backIndex').bind('click',function(){
+			window.location.href = _host+'/api/benz/color';
+		})
+		$('.page1_share').bind('click',function(){
+			$('.prompt2').show()
+		})
+		$('.promptBg').bind('click',function(){
+			$('.prompt2').hide()
+		})
+		var url = _host+'/api/benz/colorlist'
+		$.get(url,function(obj){
+			if( obj.errcode == 0 ){
+				var html = '';
+				for( var i = 0 ; i < obj.data.length ; i++ ){
+					html += '<li class="ph_more">'
+					html +=		'<p class="ph_num">'+(i+4)+'</p>'
+					var timer = formatDuring( parseInt(obj.data[i].SpendTime) )
+					html +=		'<p class="ph_name">'+ obj.data[i].NickName +'</p>'
+					html +=		'<p class="ph_score">'+ timer +'</p>'
+					html +=	'</li>'
+//						if(i == 0){
+//							html +='<li class="ph_one">'
+//							html +=		'<p class="ph_num"></p>'
+//							var timer = formatDuring( parseInt(obj.data[i].SpendTime) )
+//							html +=		'<p class="ph_name">'+ obj.data[i].NickName +'</p>'
+//							html +=		'<p class="ph_score">'+ timer +'</p>'
+//							html +=	'</li>'
+//						}else if( i ==1 ){
+//							html +='<li class="ph_two">'
+//							html +=		'<p class="ph_num"></p>'
+//							var timer = formatDuring( parseInt(obj.data[i].SpendTime) )
+//							html +=		'<p class="ph_name">'+ obj.data[i].NickName +'</p>'
+//							html +=		'<p class="ph_score">'+ timer +'</p>'
+//							html +=	'</li>'
+//						}else if( i == 2){
+//							html +='<li class="ph_three">'
+//							html +=		'<p class="ph_num"></p>'
+//							var timer = formatDuring( parseInt(obj.data[i].SpendTime) )
+//							html +=		'<p class="ph_name">'+ obj.data[i].NickName +'</p>'
+//							html +=		'<p class="ph_score">'+ timer +'</p>'
+//							html +=	'</li>'
+//						}else{
+//							html += '<li class="ph_more">'
+//							html +=		'<p class="ph_num">'+(i+1)+'</p>'
+//							var timer = formatDuring( parseInt(obj.data[i].SpendTime) )
+//							html +=		'<p class="ph_name">'+ obj.data[i].NickName +'</p>'
+//							html +=		'<p class="ph_score">'+ timer +'</p>'
+//							html +=	'</li>'
+//						}
+				}
+				$('.ph_more').html(html)
+			}
+		})
+	</script>
+</html>

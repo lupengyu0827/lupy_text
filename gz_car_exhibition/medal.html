@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.medal_btn{
+				width: 0.213333rem !important;
+				height: 0.8rem !important;
+				position: absolute;
+				left: 2.026666rem;
+				top: 7.666666rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="medal_bg">
+			<div class="medal_list">
+				<img class="one_medal" src="images/medal_1-1.png"/>
+				<img class="two_medal" src="images/medal_2-1.png"/>
+				<img class="three_medal" src="images/medal_3-1.png"/>
+				<img class="medal_btn" src="images/medal_btn.png"/>
+			</div>
+			<div class="medal_main" style="height: 0;">
+				<img class="medal_0" src="images/0_medal.png" alt="" />
+				<img class="medal_1" src="images/1_medal.png" alt="" />
+				<img class="medal_2" src="images/2_medal.png" alt="" />
+				<img class="medal_3" src="images/3_medal.png" alt="" />
+			</div>
+			<div class="saoyisao"></div>
+			<div class="back_index"></div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.back_index').bind('click',function(){
+			window.location.href = 'jzyl.html?type=jzyl' 
+		})
+		var a = 3
+		if( a == "未点亮" ){
+			$('.medal_btn').hide();
+			$('.medal_main img').hide();
+			$('.medal_0').show();
+		}else if( a == 1 ){
+			$('.one_medal').attr('src','images/medal_1-2.png');
+			$('.medal_main img').hide();
+			$('.medal_1').show();
+		}else if( a == 2){
+			$('.medal_btn').css('left','5rem');
+			$('.one_medal').attr('src','images/medal_1-2.png');
+			$('.two_medal').attr('src','images/medal_2-2.png');
+			$('.medal_main img').hide();
+			$('.medal_2').show();
+		}else if( a ==3 ){
+			$('.medal_btn').css('left','7.933333rem');
+			$('.one_medal').attr('src','images/medal_1-2.png');
+			$('.two_medal').attr('src','images/medal_2-2.png');
+			$('.three_medal').attr('src','images/medal_3-2.png');
+			$('.medal_main img').hide();
+			$('.medal_3').show();
+		}
+		
+	</script>
+
+</html>

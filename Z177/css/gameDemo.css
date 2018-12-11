@@ -1,0 +1,112 @@
+#gameDemoBg{
+	width: 10rem;
+	height: 19.293333rem;
+	overflow: hidden;
+	background-image: url(../images/gameDemoBg.jpg);
+	background-size: 100% 100%;
+}
+#handImg{
+	width: 3.333333rem;
+	height: 3.066666rem;
+	position: absolute;
+	top: 12.4rem;
+	left: 1.866666rem;
+	animation:mymove 1s linear infinite;
+	-webkit-animation:mymove 1s linear infinite; /* Safari 和 Chrome */
+
+	z-index: 2;
+	
+}
+@keyframes mymove{
+	
+	from{
+		/*transform: translate(0,0);
+		-webkit-transform: translate(0,0);*/
+		opacity: 0;
+	}
+	
+	to{
+		/*transform: translate(70px,-200px);
+		-webkit-transform: translate(70px,-120px);*/
+		opacity: 1;
+	}
+	/*100%{
+		transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+	}*/
+}
+@-webkit-keyframes mymove{
+	from{
+		/*transform: translate(0,0);
+		-webkit-transform: translate(0,0);*/
+		opacity: 0;
+	}
+	
+	to{
+		/*transform: translate(70px,-200px);
+		-webkit-transform: translate(70px,-120px);*/
+		opacity: 1;
+	}
+}
+
+/*@-webkit-keyframes mymove{
+	0%{
+		top: 12.4rem;
+		left: 1.866666rem;
+	}
+	50%{
+		top: 9.6rem;
+		left: 4rem;
+	}
+	100%{
+		top: 12.4rem;
+		left: 1.866666rem;
+	}
+}*/
+
+
+.gameDemoTrueClick{
+	width: 5.786666rem;
+	height: 0.666666rem;
+	position: absolute;
+	top: 12.613333rem;
+	left: 2.133333rem;
+	z-index: 2;
+}
+.gameDemoTrue{
+	width: 0.986666rem;
+	height: 5.12rem;
+	position: absolute;
+	/*478 344*/
+	top: 6.373333rem;
+	left: 4.586666rem;
+}
+
+
+.prompt3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: none;
+}
+.prompt3 img{
+	width: 8.453333rem;
+	height: 13.333333rem;
+	position: absolute;
+	top: 0.933333rem;
+	left: 0.746666rem;
+}
+.gameDemoPromptTrue{
+	width: 3.653333rem;
+	height: 1.253333rem;
+	position: absolute;
+	top: 12.96rem;
+	left: 3.013333rem;
+}
+.pause {
+    animation-play-state: paused;
+  }

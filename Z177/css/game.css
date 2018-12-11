@@ -1,0 +1,331 @@
+#game{
+	width: 10rem;
+	height: 19.293333rem;
+	overflow: hidden;
+	background-image: url(../images/gameBg.jpg);
+	background-size: 100% 100%;
+}
+.custom{
+	width: 1.68rem;
+	height: 0.56rem;
+	margin-top: 0.693333rem;
+	margin-left: 4.106666rem;
+}
+#timer{
+	width: 5.253333rem;
+	height: 1.173333rem;
+	margin: auto;
+	margin-top: 0.506666rem;
+	color: #fff;
+}
+.wxy{
+	width: 3.906666rem;
+	height: 2.706666rem;
+	margin-left: 2.986666rem;
+	margin-top: 0.066666rem;
+}
+.life{
+	width: 0.986666rem;
+	height: 0.4rem;
+	margin-left: 4.666666rem;
+	margin-top: 0.306666rem;
+}
+.oneBlood{
+	width: 0.306666rem;
+	height: 0.293333rem;
+	/*position: absolute;*/
+}
+.twoBlood{
+	width: 0.306666rem;
+	height: 0.293333rem;
+	/*position: absolute;*/
+}
+.game1 .colourDisk{
+	width: 6.573333rem;
+	height: 5.093333rem;
+	position: absolute;
+	top: 6.72rem;
+	left: 1.786666rem;
+	background-image: url(../images/gameOneDisk.png);
+	background-size: 100% 100%;
+}
+.game2 .colourDisk{
+	width: 6.573333rem;
+	height: 5.093333rem;
+	position: absolute;
+	top: 6.72rem;
+	left: 1.786666rem;
+	background-image: url(../images/gameTwoDisk.png);
+	background-size: 100% 100%;
+}
+.game3 .colourDisk{
+	width: 6.573333rem;
+	height: 5.093333rem;
+	position: absolute;
+	top: 6.72rem;
+	left: 1.786666rem;
+	background-image: url(../images/gameThreeDisk.png);
+	background-size: 100% 100%;
+}
+.game4 .colourDisk{
+	width: 6.133333rem;
+	height: 5.653333rem;
+	position: absolute;
+	top: 6.2rem;
+	left: 1.786666rem;
+	background-image: url(../images/gameFourDisk.png);
+	background-size: 100% 100%;
+}
+
+
+.dui{
+	width: 0.453333rem;
+	height: 0.346666rem;
+	margin-left: 0.136666rem;
+	margin-top: 0.106666rem;
+	display: none;
+}
+.cuo{
+	width: 0.28rem;
+	height: 0.28rem;
+    margin-top: 0.12rem;
+    margin-left: 0.21rem;
+	display: none;
+}
+.prompt3,.prompt4{
+	display: none;
+}
+
+#timer img{
+	width: 0.266666rem;
+	height: 0.426666rem;
+}
+.min{
+	width: 2.373333rem;
+	height: 1.12rem;
+	float: left;
+	position: relative;
+}
+.sec{
+	width: 2.373333rem;
+	height: 1.12rem;
+	float: right;
+	position: relative;
+}
+.min1{
+	position: absolute;
+	top: 0.32rem;
+	left: 0.346666rem;
+}
+.min2{
+	position: absolute;
+	top: 0.32rem;
+	left: 1.6rem;
+}
+.sec1{
+	position: absolute;
+	top: 0.32rem;
+	left: 0.346666rem;
+}
+.sec2{
+	position: absolute;
+	top: 0.32rem;
+	left: 1.6rem;
+}
+.prompt_page3{
+	width: 8.48rem;
+	height: 10.506666rem;
+	position: absolute;
+	top: 1.333333rem;
+	left: 0.746666rem;
+}
+.newly{
+	width: 3.44rem;
+	height: 1.2rem;
+	position: absolute;
+	left: 1.333333rem;
+	top: 10.666666rem;
+}
+.share{
+	width: 3.44rem;
+	height: 1.2rem;
+	position: absolute;
+	left: 5.013333rem;
+	top: 10.666666rem;
+}
+.wxy_1{
+	width: 4.133333rem;
+	height: 2.72rem;
+	position: absolute;
+	top: 1.333333rem;
+	left: 2.906666rem;
+}
+.sixs{
+	width: 5.706666rem;
+	height: 2rem;
+	position: absolute;
+	top: 5.306666rem;
+	left: 2.106666rem;
+}
+.threes{
+	width: 5.706666rem;
+	height: 2rem;
+	position: absolute;
+	top: 7.973333rem;
+	left: 2.106666rem;
+}
+.back_btn{
+	width: 4.706666rem;
+	height: 1.626666rem;
+	position: absolute;
+	left: 2.586666rem;
+	top: 10.8rem;
+}
+.game1 .one_1{
+	position: absolute;
+	top: 0rem;
+	left: 2.186666rem;
+}
+.game2 .one_1{
+	position: absolute;
+	top: 0rem;
+	left: 1.626666rem;
+}
+.game2 .colourDisk p{
+	float: left;
+	width: 0.853333rem;
+	height: 5.093333rem;
+}
+
+.game3 .colourDisk p{
+	float: left;
+	height: 5.093333rem;
+}
+.game3 .one_1{
+	position: absolute;
+	top: 0rem;
+	width: 0.853333rem;
+	left: 0.813333rem;
+}
+.game3 .one_2{
+	position: absolute;
+	width: 0.88rem;
+	top: 0rem;
+	left:3.266666rem;
+}
+.game4 .one_1{
+	position: absolute;
+	top: 2.56rem;
+	left: 3.573333rem;
+	width: 0.52rem;
+	height: 0.426666rem;
+}
+
+.game1 .colourDisk p{
+	float: left;
+	width: 1.123333rem;
+	height: 5.093333rem;
+}
+.game1 .optionDisk{
+	width: 6.573333rem;
+	position:absolute;
+	top: 12.48rem;
+	left:1.786666rem ;
+}
+/*60 46*/
+.game1 .optionDisk li{
+	width: 0.746666rem;
+	height: 0.56rem;
+	border: 1px dashed #FFFFFF;
+	float: left;
+	margin-right: 0.333333rem;
+}
+.game1 .optionDisk li:last-child{
+	margin-right: 0;
+}
+.game2 .optionDisk{
+	width: 6.266666rem;
+	position:absolute;
+	top: 12.48rem;
+	left:2.08rem;
+}
+.game2 .optionDisk li{
+	width: 0.746666rem;
+	height: 0.56rem;
+	border: 1px dashed #FFFFFF;
+	float: left;
+	margin-right: 0.4rem;
+	margin-bottom: 0.266666rem;
+}
+.game2 .optionDisk li:last-child{
+	margin-right: 0;
+}
+.game3 .optionDisk{
+	width: 6.266666rem;
+	position:absolute;
+	top: 12.48rem;
+	left:2.08rem;
+}
+.game3 .optionDisk li{
+	width: 0.746666rem;
+	height: 0.56rem;
+	border: 1px dashed #FFFFFF;
+	float: left;
+	margin-right: 0.4rem;
+	margin-bottom: 0.266666rem;
+}
+.game3 .optionDisk li:last-child{
+	margin-right: 0;
+}
+
+.game4 .optionDisk{
+	width: 6.266666rem;
+	position:absolute;
+	top: 12.48rem;
+	left:2.08rem;
+}
+.game4 .optionDisk li{
+	width: 0.746666rem;
+	height: 0.56rem;
+	border: 1px dashed #FFFFFF;
+	float: left;
+	margin-right: 0.4rem;
+	margin-bottom: 0.266666rem;
+}
+.game4 .optionDisk li:last-child{
+	margin-right: 0;
+}
+.prompt5{
+	display: none;
+}
+.prompt5 img{
+	width: 8.48rem;
+	height: 11.12rem;
+	position: absolute;
+	top: 1.333333rem;
+	left: 0.76rem;
+}
+.challenge{
+	width: 3.466666rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 11.28rem;
+	left: 3.013333rem;
+}
+.prompt6{
+	display: none;
+}
+.prompt6 img{
+	width: 8.48rem;
+	height: 11.12rem;
+	position: absolute;
+	top: 1.333333rem;
+	left: 0.76rem;
+}
+.gameover{
+	width: 3.466666rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 11.28rem;
+	left: 3.013333rem;
+}

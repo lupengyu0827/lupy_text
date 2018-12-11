@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.swiper-container {
+				width: 8.4rem;
+				height: 5.6rem;
+				margin-top: 0.266666rem;
+			}
+			.swiper-slide img {
+				width: 8.4rem;
+			}
+			.swiper-pagination {
+			    top: 5.7rem !important;
+			    height: 2rem;
+			}
+			.swiper-pagination-bullet {
+			    background: #e1e1e1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="yskx">
+			<div class="imgList_bg">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="imgList_text">
+				</div>
+				<div class="imgList_btnList">
+					<img src="images/last.png"/>
+					<img src="images/next.png"/>
+				</div>
+			</div>
+			<div class="tabBar">
+				<img class="yskx" src="images/yskx_2.png"/>
+				<img class="jzyl" src="images/jzyl_2.png"/>
+				<img class="yxc" src="images/yxc_2.png"/>
+				<img class="spzx" src="images/spzx_2.png"/>
+			</div>
+			<div class="zhe">
+				<div class="zheBg"></div>
+				<img src=""/>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var width = $('.swiper-slide img').width();
+		var height = (width*3)/4;
+		$('.swiper-slide img ,.swiper-container').css('height',height);
+		var mySwiper = new Swiper('.swiper-container', {
+			//	    	direction: 'vertical'
+			direction: 'horizontal',
+			pagination: '.swiper-pagination'
+		})
+		
+		$(".swiper-slide img").bind('click',function(){
+			var imgSrc =  $(this).attr('src');
+			console.log("src="+imgSrc)
+			$('.zhe').show();
+			$('.zhe img').attr('src',imgSrc);
+			var bodyHeight = document.body.clientHeight;
+			var imgWidth = $('.zhe img').width();
+			var imgHeight = (imgWidth*3)/4;
+			var top = (bodyHeight - imgHeight) / 2;
+			$('.zhe img').css({'top':top ,'height':imgHeight})
+			
+		})
+		$('.zheBg').bind('click',function(){
+			$('.zhe').hide()
+		})
+	</script>
+
+</html>

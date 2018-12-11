@@ -1,0 +1,79 @@
+#viewBg{
+	width: 10rem;
+	height: 19.333333rem;
+	overflow: hidden;
+	background-image: url(../images/gameView.jpg);
+	background-size: 100% 100%;
+}
+.timers{
+	width: 5.253333rem;
+	height: 1.146666rem;
+	position: absolute;
+	top: 2.393333rem;
+	left: 2.44rem;
+}
+.timers .minute{
+	float: left;
+	width: 2.533333rem;
+	height: 1.146666rem;
+	position: relative;
+}
+.minute1{
+	position: absolute;
+	top: 0.32rem;
+	left: 0.426666rem;
+}
+.minute2{
+	position: absolute;
+	top: 0.32rem;
+	left:1.706666rem;
+}
+.timers img{
+	width: 0.266666rem;
+    height: 0.426666rem;
+}
+.timers .second{
+	float: right;
+	width: 2.533333rem;
+	height: 1.146666rem;
+	position: relative;
+}
+.second1{
+	position: absolute;
+	top: 0.32rem;
+	left:0.533333rem;
+}
+.second2{
+	position: absolute;
+	top: 0.32rem;
+	left:1.8rem;
+}
+.ckbd{
+	width: 2.706666rem;
+	height: 0.96rem;
+	position: absolute;
+	top: 13.6rem;
+	left: 0.866666rem;
+}
+.zctz{
+	width: 2.706666rem;
+	height: 0.96rem;
+	position: absolute;
+	top: 13.6rem;
+	left: 3.733333rem;
+}
+.dsyx{
+	width: 2.706666rem;
+	height: 0.96rem;
+	position: absolute;
+	top: 13.6rem;
+	left: 6.6rem;
+}
+.score{
+	position: absolute;
+	top: 6.133333rem;
+	left: 3.366666rem;
+	font-size:1.133333rem;
+	color: #ffb049;
+	font-style: italic;
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>捷豹中国</title><meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detecation" content="telephone=no, email=no">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script>
+      var clientWidth= document.documentElement.clientWidth;
+      var devicePixelRatio= window.devicePixelRatio;
+      if(clientWidth>640) {clientWidth= 640;document.getElementsByTagName('html')[0].style.cssText="width: "+ clientWidth+ "px;margin: 0 auto"}
+      var fontSize= clientWidth * 0.1;
+      document.getElementsByTagName('html')[0].style['font-size']= fontSize + 'px';
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="nav"><a href="http://www.jaguar.com.cn/jaguar-range/index.html" class="col-xs-2 text-center"></a><a href="http://www.jaguar.com.cn/jaguar-range/xe/index.html" class="col-xs-2 text-center"></a><a href="http://www.jaguar.com.cn/jaguar-range/xf/index.html" class="col-xs-2 text-center"></a><a href="http://www.jaguar.com.cn/jaguar-range/xj/index.html" class="col-xs-2 text-center"></a><a href="http://www.jaguar.com.cn/jaguar-range/F-Type/index.html" class="col-xs-2 text-center"></a><a href="http://www.jaguar.com.cn/jaguar-range/f-pace/index.html" class="col-xs-2 text-center"></a></div>
+      </div>
+      <div class="row"><img src="images/q_02.jpg"></div>
+      <div style="background: url(images/bg.jpg) no-repeat center top;" class="row">
+        <div class="form center"></div>
+      </div>
+      <div class="row center offset-bottom-16">
+        <div class="tip">敬请正确填妥您的贵宾信息。（温馨提醒：带*选项为必填项）</div>
+      </div>
+      <div class="row grey">
+        <div class="row center cat">
+          <div class="col-xs-5">
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="row">
+                  <div style="line-height:29px;" class="text-left">*姓名:</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row">
+              <input type="text" maxlength="5" id="user" style="width: 100%;padding: 0 5px;height:29px;">
+            </div>
+          </div>
+        </div>
+        <div class="row center cat">
+          <div class="col-xs-5">
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="row">
+                  <div class="text-left">*称谓:</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="row">
+                  <input type="radio" id="man" name="sex" checked="checked">
+                  <label for="man">先生</label>
+                </div>
+              </div>
+              <div class="col-xs-4 col-xs-offset-1">
+                <div class="row">
+                  <input type="radio" id="women" name="sex">
+                  <label for="women">女士</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row center cat">
+          <div class="col-xs-5">
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="row">
+                  <div style="line-height:29px;" class="text-left">*手机:</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row">
+              <input type="tel" maxlength="12" id="phone" style="width: 100%;padding: 0 5px;height:29px;">
+            </div>
+          </div>
+        </div>
+        <div class="row center cat">
+          <div class="col-xs-5">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div style="line-height:29px;" class="text-left">*您感兴趣的捷豹车型:</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row">
+              <select name="model" id="model" style="height:29px;width:100%;-webkit-appearance:menulist;padding: 0 5px" class="sr1">
+                <option value="">请选择</option>
+                <option value="A.捷豹F-PACE">A.捷豹F-PACE</option>
+                <option value="B.捷豹XFL">B.捷豹XFL</option>
+                <option value="C.捷豹F-TYPE">C.捷豹F-TYPE</option>
+                <option value="D.捷豹XJ">D.捷豹XJ</option>
+                <option value="E.捷豹XE">E.捷豹XEL</option>
+                <option value="F.捷豹E-PACE">F.捷豹E-PACE</option>
+                <option value="G.捷豹I-PACE">G.捷豹I-PACE</option>
+                <option value="H.捷豹XF Sportbrake">H.捷豹XF Sportbrake</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row center txt1">活动机制：每答对一题可获得一分，总分排名前200名将获得捷豹赠送的精美礼品。竞赛截止时间2018年3月31日。</div>
+      <div class="row center txt1">
+        <input type="checkbox" checked="checked" class="policy">我已阅读并同意本网站的《<a href="https://www.jaguar.com.cn/privacy-legal.html?_ga=2.262551887.2130692938.1520478620-1057609351.1497248320">隐私政策</a>》。我自愿提供以上信息给捷豹路虎（中国）投资有限公司、奇瑞捷豹路虎汽车有限公司和奇瑞捷豹路虎汽车销售有限公司。我理解，以上信息的收集主要将被用于贵方向我提供并改善服务，以及有关调查及统计目的。我同意捷豹路虎（中国）投资有限公司及其境内外关联公司或分支机构、授权经销商、代理商、第三方服务提供商及合作伙伴分享所收集到的个人信息，并同意前述主体通过以上信息与我取得联系。
+      </div>
+      <div class="row center">
+        <div class="text-right"><a class="btn submit">提交答案</a></div>
+      </div>
+      <div class="row"><img src="images/info1_11.jpg"></div>
+      <div class="row">
+        <div class="foot">
+          <div class="title"><img src="images/txt.png"></div>
+          <div class="txt">
+            <p>您所提供的个人信息将仅用于捷豹汽车有限公司改善服务之用途。您的个人信息将不会出售给其他公司。</p>
+            <p>若需要了解更多相关资讯，请参阅我们的<a href="https://www.jaguar.com.cn/privacy-legal.html">隐私条款。</a></p><br>
+            <p>捷豹汽车有限公司. 注册地为英国；注册号 1672070. </p>
+            <p>捷豹中国办公室地址：中国上海市浦东新区东育路227弄前滩世贸中心（二期）6 号（D幢）8-12楼, 邮编：200126</p>
+          </div>
+          <div class="share">
+            <div class="col-xs-2">
+              <div class="row"><a href="http://dealer.jaguar.com.cn/"><img src="images/icon_02.jpg"></a></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="row"><a href="https://jdxforms.jaguar.com.cn/request-a-test-drive/?"><img src="images/icon_06.jpg"></a></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="row"><a href="https://weibo.com/jaguarcn"><img src="images/icon_08.jpg"></a></div>
+            </div>
+            <div class="col-xs-4 col-xs-offset-2">
+              <div class="row">
+                <div class="col-xs-5 text-center">
+                  <div class="row">分享至:</div>
+                </div>
+                <div class="col-xs-7">
+                  <div class="row"><a href="https://www.douban.com/share/service?name=捷豹中国&amp;url="><img src="images/icon11_02.jpg"></a><a href="http://service.weibo.com/share/share.php?title=捷豹中国&amp;url="><img src="images/icon11_04.jpg"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      
+      
+      (function(){
+      	var s = [
+      		{
+      			'qt': '拥有轻铝坚固车身的捷豹F-PACE，在先进科技及杰出性能的加持下，2017年成功挑战了哪些“不可能”？',
+      			'aw': [
+      				'A . 摩天轮飞车',
+      				'B . 高空走钢丝',
+      				'C . A和B都有'
+      			]
+      		},{
+      			'qt': '全新捷豹XFL，沉稳而不失动感，以下哪项精妙设计属于XFL？',
+      			'aw': [
+      				'A . 游艇式环抱座舱',
+      				'B . 宽绰后排空间',
+      				'C . 人性化奢适座椅',
+      				'D . 都有'
+      			]
+      		},{
+      			'qt': '除了拥有至美颜值之外，每辆F TYPE 都有一颗“澎湃的心脏”。F‑TYPE SVR百公里加速，仅需多少秒？',
+      			'aw': [
+      				'A . 3.7秒',
+      				'B . 4.7秒',
+      				'C . 5.7秒'
+      			]
+      		},{
+      			'qt': '捷豹XJ不负优雅豪华座驾之名，环顾座舱内细节，你会发现以下哪项配备？',
+      			'aw': [
+      				'A .10.2”触控屏',
+      				'B . 手工饰面板',
+      				'C . 全景隔热天窗',
+      				'D . 都有'
+      			]
+      		},{
+      			'qt': '陈伟霆所告白的“爱我所爱，注定不同”，指的是哪款捷豹？',
+      			'aw': [
+      				'A . 捷豹F-PACE',
+      				'B . 捷豹XEL ',
+      				'C . 捷豹XFL'
+      			]
+      		},{
+      			'qt': '全新捷豹XEL，让您尽享宽绰奢适的剧院式座舱，其轴距长达？',
+      			'aw': [
+      				'A . 2835毫米 ',
+      				'B . 2900毫米 ',
+      				'C . 2935毫米'
+      			]
+      		},{
+      			'qt': '捷豹首款电动汽车I-PACE概念车，单次充电续航里程为？',
+      			'aw': [
+      				'A . 300公里 ',
+      				'B . 400公里 ',
+      				'C . 超过500公里'
+      			]
+      		},{
+      			'qt': '旅途的好伙伴——捷豹豪华旅行座驾是？',
+      			'aw': [
+      				'A . 捷豹XF Sportbrake',
+      				'B . 捷豹XEL',
+      				'C . 捷豹 F-Pace'
+      			]
+      		},{
+      			'qt': '捷豹先进的车载科技——InControl智能驭领系统包含哪些功能？',
+      			'aw': [
+      				'A . 路线导航 ',
+      				'B . 远程遥控 ',
+      				'C . 驾驶辅助',
+      				'D . 都有'
+      			]
+      		},{
+      			'qt': '您更喜欢参加以下哪类品牌活动？',
+      			'aw': [
+      				'A . 线上H5互动等',
+      				'B . 线下试驾活动',
+      				'C . 工厂一日游',
+      				'D . 车迷分享会',
+      				'E . 其他：<input type="text" id= "other" maxlength="8" style="border: none;-webkit-border-radius: 0;border-radius: 0;border-bottom: 1px solid #a9a9a9;width:50%;">'
+      			]
+      		}
+      	]
+      	var f = document.querySelector('.form');
+      	
+      	for(var i = 0; i < s.length; i++){
+      		var div = document.createElement('div');
+      		div.className = 'cell';
+      		var q = '<div class="qt"><span>'+ (i+1) + '.</span>' + s[i].qt + '</div>';
+      		var aHtml = '';
+      		for(var j = 0; j < s[i].aw.length; j++){
+      			var a = '<div class="aw"><input type="radio" name = a'+i.toString()+' id=' +  'a'+  i.toString() + (j+1).toString() + ' ><label for=a'+i.toString() + (j+1).toString()+'>'+s[i].aw[j]+'</label></div>'
+      			aHtml += a;
+      		}
+      		div.innerHTML= q + aHtml;
+      
+      		f.appendChild(div);
+      		
+      	}
+      	var b = document.querySelector('.submit');
+      	var aArr = [];
+      	for(var i =0; i< 10; i++){
+      		aArr.push(document.querySelectorAll('input[name="a'+i+'"]'));
+      	}
+      	function checked(arr){
+      		for(var i = 0; i< arr.length; i++){
+      			if(arr[i].checked){
+      				return arr[i].id;
+      			}
+      		}
+      	}
+      	b.addEventListener('click',function(){
+      		var idArr = [], rArr = [];
+      		for(var i =0; i< aArr.length; i++){
+      			idArr.push(checked(aArr[i]));
+      		}
+      		
+      		
+      		var textarea = document.querySelector('textarea');
+      		var sex = document.querySelectorAll('input[name="sex"]');
+      		var name = document.querySelector('input[id="user"]');
+      		var phone = document.querySelector('input[id="phone"]');
+      		var model = document.getElementById('model');
+      		var policy = document.querySelector('.policy');
+      		for(var i =0; i< idArr.length; i++){
+      			if(!idArr[i]){
+      				alert('问题'+(i+1)+'还没有答哦');
+      				return;
+      			}else{
+      				var v = document.querySelector('label[for="'+ (idArr[i])+ '"]')
+      				var currentValue;
+      				if(i == 9 && 'a95' == idArr[9]){
+      					currentVaule = v.innerText + document.querySelector('#other').value;
+      				}else{
+      					currentVaule = v.innerText;
+      				}	
+      				rArr.push(currentVaule);
+      
+      			}
+      		}
+      		if(!name.value){
+      			alert('姓名还没有填写哦');
+      			return false;
+      		}else{
+      			rArr.push('姓名：'+ name.value);
+      		}
+      		if(!phone.value){
+      			alert('手机号码还没有填写哦');
+      			return false;
+      		}else{
+      			rArr.push('手机：'+ phone.value);
+      		}
+      		if(model.selectedIndex == 0){
+      			alert('捷豹车型还没有填写哦');
+      			return false;
+      		}else{
+      			rArr.push('感兴趣的捷豹车型：'+ model.options[model.selectedIndex].value);
+      		}
+      		if(!policy.checked){
+      			alert('请勾选我已阅读并同意网站的隐私政策');
+      			return false;
+      		}
+      		rArr.push('性别：'+ document.querySelector('label[for="'+ (checked(sex))+ '"]').innerText)
+      		alert('提交成功');
+      
+      		//- console.log(rArr);
+      	},false)
+      
+      
+      
+      
+      	
+      
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<title>够出色就上榜</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/game.css"/>
+	</head>
+	<body>
+		<div id="game">
+			<img class="custom" src="images/oneGame.png"/>
+			<div id="timer">
+				<p class="min">
+					<img class="min1" src="images/0.png"/>
+					<img class="min2" src="images/0.png"/>
+				</p>
+				<p class="sec">
+					<img class="sec1" src="images/0.png"/>
+					<img class="sec2" src="images/0.png"/>
+				</p>
+			</div>
+			<img class="wxy" src="images/wxy_yes.png"/>
+			<div class="life">
+				<img class="oneBlood" src="images/blood.png"/>
+				<img class="twoBlood" src="images/blood.png"/>
+			</div>
+			<div class="game1" >
+				<div class="colourDisk">
+					<p class="one_1"></p>
+				</div>
+				<ul class="optionDisk">
+				</ul>
+			</div>
+			<div class="game2" style="display: none;">
+				<div class="colourDisk">
+					<p class="one_1"></p>
+				</div>
+				<ul class="optionDisk">
+				</ul>
+			</div>
+			<div class="game3" style="display: none;">
+				<div class="colourDisk">
+					<p class="one_1"></p>
+					<p class="one_2"></p>
+				</div>
+				<ul class="optionDisk">
+				</ul>
+			</div>
+			<div class="game4" style="display: none;">
+				<div class="colourDisk">
+					<p class="one_1"></p>
+				</div>
+				<ul class="optionDisk">
+				</ul>
+			</div>
+		</div>
+		<div class="audioList"></div>
+		<!--失败-->
+		<div class="prompt3">
+			<div class="promptBg"></div>
+			<img class="prompt_page3" src="images/lose.png"/>
+			<div class="newly"></div>
+			<div class="share"></div>
+		</div>
+		<!--引导分享-->
+		<div class="prompt2">
+			<div class="promptBg"></div>
+			<img src="images/share.png"/>
+		</div>
+		<!--王小雨弹窗-->
+		<div class="prompt4">
+			<div class="promptBg"></div>
+			<img class="wxy_1" src="images/wxy_1.png"/>
+			<div class="clickSixs">
+				<img class="sixs" src="images/60s.png"/>
+			</div>
+			<div class="clickTrees"><img class="threes" src="images/30s.png"/></div>
+			<img class="back_btn" src="images/back.png"/>
+		</div>
+		<!--第三关提示-->
+		<div class="prompt5">
+			<div class="promptBg"></div>
+			<img src="images/four_prompt.png"/>
+			<div class="challenge"></div>
+		</div>
+		<!--游戏通关-->
+		<div class="prompt6">
+			<div class="promptBg"></div>
+			<img src="images/gameOver.png"/>
+			<div class="gameover"></div>
+		</div>
+		<audio id="audio1" style="display: none;" src="audio/1.mp3" preload="auto"  ></audio>
+		<audio id="audio2" style="display: none;" src="audio/2.wav" preload="auto"  ></audio>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var score = -1;
+		var blood = 2;//血量两次
+		var help = 3; //求助3次
+		var customs = 1 ; //第几关
+		
+		// 初始化第一关游戏
+		var oneArr = ['#102943','#4372a2','#153b65',"#223346",'#214267','#081828'];
+		var OneTrueColor = '#102943';
+		colorBg(oneArr,1,6,1);
+		
+		// 初始化第二关游戏
+		var TwoArr = ['#8c7d7a','#775b56','#413c3b',"#614944",'#84716d','#544542','#453936','#7e6560','#675855','#5b4e4b'];
+		var twoTrueColor = '#8c7d7a';
+		colorBg(TwoArr,2,10,2);
+		
+		// 初始化第三关游戏
+		var ThreeArr = ['#51596a','#000000','#171d37',"#111422",'#34374d','#1f2236','#262b35','#6e738a','#2b2d3e','#434853'];
+		var threeTrueColor = '#1f2236';
+		var threeTrueColor2 = '#111422';
+		var threeAnsu = 1 ;
+		colorBg(ThreeArr,2,10,3);
+		
+		// 初始化第四关游戏
+		var FourArr = ['#c25257','#edc1c1','#9d292f',"#74171e",'#b7434c','#8d2c30','#841b24','#a82e33','#8e5c5e','#c4000f'];
+		var fourTrueColor = '#9d292f';
+		colorBg(FourArr,2,10,4);
+		
+		// 加载答题卡
+		// arr 选项列表 ； 
+		// num 是否跳到下一关 重置血量；1不重置，2重置
+		// page 生成选项的个数；
+		// cus 当前关数;
+		function colorBg(arr , num ,page , cus ){
+			var html = '';
+			var onelist = getRandomArrayElements(arr, page);
+			for( var i = 0 ; i < onelist.length ; i++ ){
+				html+= '<li class="wrong" data-color="'+ onelist[i] +'" style="background:'+ onelist[i] +'" >'
+				html+=		'<img class="dui" src="images/dui.png"/>'
+				html+=		'<img class="cuo" src="images/cuo.png"/>'
+				html+= '</li>'
+			}
+			var gameId = '.game'+cus+' .optionDisk' ;
+			$( gameId ).html(html);
+			if( num == 2 ){
+				blood = 2;
+				$('.oneBlood,.twoBlood').attr('src','images/blood.png');
+			}
+			$('.game'+cus+' .optionDisk li').bind('click',function(){
+				switch ( customs ){
+					case 1:
+						answer = OneTrueColor;
+						break;
+					case 2:
+						answer = twoTrueColor;
+						break;
+					case 3:
+						if( threeAnsu == 1 ){
+							answer = threeTrueColor;
+						}else{
+							answer = threeTrueColor2;
+						}
+						break;
+					case 4:
+						answer = fourTrueColor;
+						break;	
+					default:
+						break;
+				}
+				var c = $(this).attr('data-color');
+				console.log(c)
+				if( customs == 3 ){
+					if( c ==  threeTrueColor ){
+						clickRightColor( 3 , threeTrueColor );
+						$(this).find('.dui').show();
+					}else if( c ==  threeTrueColor2 ){
+						clickRightColor( 3 , threeTrueColor2 );
+						$(this).find('.dui').show();
+					}else{
+						//答错  显示X 并且血量减一  同时消失
+						clickWrongColor( answer );
+						$(this).find('.cuo').show();
+						if( blood == 2 ){
+							$('.oneBlood').attr('src','images/blood2.png');
+							blood = blood-1;
+						}else{
+							$('.twoBlood').attr('src','images/blood2.png');
+							$('.prompt3').show();
+						}
+					}	
+				}else{
+					if( c == answer  ){
+						//答对填充空白 恢复血量 
+						clickRightColor( cus , answer );
+						blood = 2;
+						$(this).find('.dui').show();
+					}else{
+						//答错  显示X 并且血量减一  同时消失
+						clickWrongColor( answer );
+						$(this).find('.cuo').show();
+						blood = blood-1;
+						if( blood == 1 ){
+							$('.oneBlood').attr('src','images/blood2.png');
+						}else{
+							$('.twoBlood').attr('src','images/blood2.png');
+							$('.prompt3').show();
+						}
+					}	
+				}
+				
+			})
+		}
+		
+		//点击正确的选项
+		function clickRightColor( cus , answer ){
+//			$('.audioList').html('');
+//			var audio1 = '<audio id="audio1" style="display: none;" src="audio/1.mp3" preload="auto"  ></audio>';
+//			$('.audioList').html(audio1);
+			var daudio = document.getElementById("audio1");
+			daudio.play();
+			console.log('threeAnsu='+threeAnsu)
+			var next = cus+1;
+			if( cus == 4 ){
+				stop();
+				setTimeout(function(){
+					$('.prompt6').show();
+				},1000)
+			}else if( cus == 3 ){
+				if( answer == threeTrueColor ){
+					$('.game'+cus+' .one_1').css({"background":threeTrueColor});
+					threeAnsu ++;
+				}else{
+					$('.game'+cus+' .one_2').css({"background":threeTrueColor2});
+					threeAnsu ++;
+				}
+				if( threeAnsu == 3 ){
+					stop();
+					setTimeout(function(){
+						blood = 2;
+						$('.prompt5').show();
+					},1000)
+				}
+				
+			}else{
+				blood = 2;
+				stop();
+				$('.game'+cus+' .one_1').css({"background":answer});
+				setTimeout(function(){
+					$('.game'+cus).hide();
+					$('.game'+next).show();
+					start();
+					$('.oneBlood,.twoBlood').attr('src','images/blood.png');
+					var customImg ;
+					customs++;
+					console.log(customs)
+					if( help > 0){
+						$('.threes').attr('src','images/30s.png');
+						$('.sixs').attr('src','images/60s.png');
+						$('.threes ,.sixs ').css('pointer-events', 'auto');
+						$('.wxy ').css('pointer-events', 'auto')
+					}else{
+						$('.threes').attr('src','images/30s_1.png');
+						$('.sixs').attr('src','images/60s_1.png');
+						$('.threes ,.sixs ').css('pointer-events', 'none');
+						$('.wxy').attr('src','images/wxy_no.png');
+						$('.wxy ').css('pointer-events', 'none')
+					}
+					switch ( customs ){
+						case 1:
+							customImg = 'images/oneGame.png';
+							break;
+						case 2:
+							customImg = 'images/twoGame.png';
+							break;
+						case 3:
+							customImg = 'images/threeGame.png';
+							break;	
+						default:
+							break;
+					}
+					$('.custom').attr('src',customImg);
+				},1000)
+			}
+			
+		}
+		
+		//游戏结束按钮
+		$('.gameover').bind('click',function(){
+			//提交数据
+			var SpendTime = parseInt(minute*60*1000)+ parseInt(second*1000)+parseInt(millisecond);
+			var ajaxSuccess = function( data ){
+				if(data.errcode == 0){
+					window.location.href = 'view.html?minute='+minute+'&second='+second;
+				}else{
+					alert(data.errmsg)
+				}
+			}
+//			GameSuccess(SpendTime,ajaxSuccess);
+			var url = _host + "/api/benz/colorsubmit";
+			$.get(url,{SpendTime:SpendTime},ajaxSuccess)
+		})
+		
+		
+		//点击错误选项
+		function clickWrongColor( answer ){
+//			$('.audioList').html('');
+//			var audio2 = '<audio id="audio2" style="display: none;" src="audio/2.wav" preload="auto"  ></audio>';
+//			$('.audioList').html(audio2);
+		  	var waudio = document.getElementById("audio2");
+		  	waudio.play();
+		}
+		
+		//重新挑战 计时器为零 重置游戏
+		$('.newly').bind('click',function(){
+			$('.prompt3').hide();
+			Reset();
+			start();
+			$('.game1').show();
+			$('.game2').hide();
+			$('.game3').hide();
+			$('.game4').hide();
+			$('.custom').attr('src','images/oneGame.png')
+			colorBg(oneArr,2,6,1);
+			colorBg(TwoArr,2,10,2);
+			colorBg(ThreeArr,2,10,3);
+			colorBg(FourArr,2,10,4);
+			$('.wxy').attr('src','images/wxy_yes.png')
+			$('.threes').attr('src','images/30s.png');
+			$('.sixs').attr('src','images/60s.png');
+			$('.threes ,.sixs ').css('pointer-events', 'auto');
+			$('.wxy ').css('pointer-events', 'auto');
+			customs=1;
+			help = 3;
+			threeAnsu=1;
+			$('.one_1').css('background','none');
+			$('.one_2').css('background','none');
+		})
+		
+		//点击30秒
+		$('.clickTrees').bind('click',function(){
+			if( help > 0 ){
+				$(this).css('pointer-events', 'none')
+				$('.threes').attr('src','images/30s_1.png');
+				$('.prompt4').hide();
+				thirty();
+				putOff()
+				start();
+			}
+		})
+		
+		//60s
+		$('.clickSixs').bind('click',function(){
+			if( help > 0 ){
+				$(this).css('pointer-events', 'none')
+				$('.sixs').attr('src','images/60s_1.png');
+				$('.prompt4').hide();
+				sixty();
+				chooseRightColor();
+				start();
+			}
+		})
+		
+		
+		//直接选择正确答案
+		function chooseRightColor( ){
+			switch ( customs ){
+				case 1:
+					answer = OneTrueColor;
+					break;
+				case 2:
+					answer = twoTrueColor;
+					break;
+				
+				case 4:
+					answer = fourTrueColor;
+					break;		
+				default:
+					break;
+			}
+			var ColorLength = $('.game'+customs+' .wrong').length;
+			var chooseRightList;
+			for( var i = 0 ; i < ColorLength ; i++ ){
+				chooseRightList = $('.game'+customs+' .wrong').eq(i).attr('data-color');
+//				if( customs == 3 ){
+					if( chooseRightList == threeTrueColor || chooseRightList == threeTrueColor2 ){
+//						clickRightColor( 3 , chooseRightList );
+						blood = 2;
+						$('.game'+customs+' .wrong').css('visibility','hidden')
+//						$('.game'+customs+' .wrong').eq(i).css('visibility','visible');
+						$('.game'+customs+' .wrong').eq(i).addClass('newGame')
+//						$('.game'+customs+' .wrong').eq(i).removeClass('wrong');
+						$('.newGame').css('visibility','visible');
+					}else{
+						if( chooseRightList == answer ){
+//							clickRightColor( customs , answer );
+							blood = 2;
+							$('.game'+customs+' .wrong').css('visibility','hidden')
+							$('.game'+customs+' .wrong').eq(i).css('visibility','visible');
+						}
+					}
+//				}else{
+					
+//				}
+			}
+		}
+		
+		
+		//开始挑战第四关
+		$('.challenge').bind('click',function(){
+			$('.prompt5').hide();
+			$('.game3').hide();
+			$('.game4').show();
+			start();
+			$('.oneBlood,.twoBlood').attr('src','images/blood.png');
+			var customImg ;
+			customs++;
+			if( help > 0){
+				$('.threes').attr('src','images/30s.png');
+				$('.sixs').attr('src','images/60s.png');
+				$('.threes ,.sixs ').css('pointer-events', 'auto')
+				$('.wxy ').css('pointer-events', 'auto')
+			}else{
+				$('.threes').attr('src','images/30s_1.png');
+				$('.sixs').attr('src','images/60s_1.png');
+				$('.threes ,.sixs ').css('pointer-events', 'none');
+				$('.wxy').attr('src','images/wxy_no.png');
+				$('.wxy ').css('pointer-events', 'none')
+			}
+			switch ( customs ){
+				case 1:
+					customImg = 'images/oneGame.png';
+					break;
+				case 2:
+					customImg = 'images/twoGame.png';
+					break;
+				case 3:
+					customImg = 'images/threeGame.png';
+					break;
+				case 4:
+					customImg = 'images/fourGame.png';
+					break;		
+				default:
+					break;
+			}
+			$('.custom').attr('src',customImg);
+		})
+		
+		
+		//去掉一半答案
+		function putOff(){
+			switch ( customs ){
+				case 1:
+					answer = OneTrueColor;
+					break;
+				case 2:
+					answer = twoTrueColor;
+					break;
+				case 3:
+					answer = threeTrueColor;
+					break;
+				case 4:
+					answer = fourTrueColor;
+					break;	
+				default:
+					break;
+			}
+			var liArr = [];
+			var diskLength = $('.game'+customs+' .wrong').length;
+			for( var i = 0 ; i < diskLength ; i++ ) {
+				var offColor =  $('.game'+customs+' .wrong').eq(i).attr('data-color');
+				if( customs == 3 ){
+					if( offColor != threeTrueColor && offColor != threeTrueColor2 ){
+						liArr.push(i);
+					}
+				}else{
+					if( offColor != answer ){
+						liArr.push(i);
+					}
+				}
+			}
+			newColorArr = getRandomArrayElements( liArr , diskLength/2 );
+			console.log(newColorArr);
+			for( var j = 0 ; j < newColorArr.length ; j ++ ){
+				$('.game'+customs+' .optionDisk li').eq(newColorArr[j]).css('visibility','hidden');
+				$('.game'+customs+' .optionDisk li').eq(newColorArr[j]).removeClass('wrong');
+			}
+		}
+		
+		
+		//引导分享
+		$('.share').bind('click',function(){
+			$('.prompt2').show();
+		})
+		$('.prompt2 .promptBg').bind('click',function(){
+			$(".prompt2").hide();
+		})
+		
+		//点击王小雨 弹出层
+		$('.wxy').bind('click',function(){
+			$('.prompt4').show();
+			stop();
+		})
+		$('.back_btn').bind('click',function(){
+			$('.prompt4').hide();
+			start();
+		})
+		
+		
+		//随机取色值
+		function getRandomArrayElements(arr, count) {
+		    var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+		    while (i-- > min) {
+		        index = Math.floor((i + 1) * Math.random());
+		        temp = shuffled[index];
+		        shuffled[index] = shuffled[i];
+		        shuffled[i] = temp;
+		    }
+		    return shuffled.slice(min);
+		}
+	 	var hour,minute,second;//时 分 秒
+		    hour=minute=second=0;//初始化
+		    var millisecond=0;//毫秒
+		    var int;
+		    var newmin,newsec;
+		  	int = setInterval(timer,50);
+		  	function Reset()//重置
+		    {
+		      	window.clearInterval(int);
+		      	millisecond=hour=minute=second=0;
+		      	$('.min2,.min1,.sec2,.sec1').attr('src','images/0.png');
+		    }
+		    function start()//开始
+		    {
+		      int=setInterval(timer,50);
+		    }
+		    function timer()//计时
+		    {
+		      millisecond=millisecond+50;
+		      if(millisecond>=1000)
+		      {
+		        millisecond=0;
+		        second=second+1;
+		      }
+		      if(second>=60)
+		      {
+		        second=0;
+		        minute=minute+1;
+		      }
+		      if(minute>=60)
+		      {
+		        minute=0;
+		        hour=hour+1;
+		      }
+		      if( minute < 10 ){
+//		      	 newmin = '0'+minute;
+				$('.min1').attr('src','images/0.png');
+		      	 $('.min2').attr('src','images/'+minute+'.png');
+		      }else{
+	      		minute1 = minute.toString();
+		      	newmin=minute1.substring(0,1);
+		      	newmin2 = minute1.substring(1,2);
+		      	$('.min2').attr('src','images/'+newmin2+'.png');
+		      	$('.min1').attr('src','images/'+newmin+'.png');
+		      }
+		      if( second < 10 ){
+		      	 newsec = '0'+second;
+		      	 $('.sec1').attr('src','images/0.png');
+		      	 $('.sec2').attr('src','images/'+second+'.png');
+		      }else{
+		      	second1 = second.toString();
+	      		newsec=second1.substring(0,1);
+		      	newsec2 = second1.substring(1,2);
+		      	$('.sec2').attr('src','images/'+newsec2+'.png');
+		      	$('.sec1').attr('src','images/'+newsec+'.png');
+		      }
+		    }
+		  	
+		  	// 加30s
+		  	function thirty(){
+		  		second = second+30
+		  		if( second >=60 ){
+		  			minute=minute+1;
+		  			second = second - 60;
+		  		}
+		  		help--;
+		  		if( help <= 0 ){
+	  				$('.wxy').attr('src','images/wxy_no.png');
+	  				$('.wxy ').css('pointer-events', 'none')
+	  			}
+		  	}
+		  	
+		  	//加60s
+		  	function sixty(){
+	  			minute=minute+1;
+	  			help--;
+	  			if( help <= 0 ){
+	  				$('.wxy ').css('pointer-events', 'none')
+	  				$('.wxy').attr('src','images/wxy_no.png');
+	  			}
+		  	}
+		  
+		    function stop()//暂停
+		    {
+		      window.clearInterval(int);
+		    }
+		    
+	</script>
+</html>

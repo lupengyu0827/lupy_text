@@ -1,0 +1,205 @@
+@font-face {
+  font-family: STHeiti;
+  src: url("../images/STHeiti-Medium.ttc"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'STHeiti';
+  -ms-touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #222;
+  font-size: 0.23333rem; }
+
+html, body {
+  margin: 0px;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+  html img, body img {
+    width: 100%;
+    vertical-align: middle; }
+  html a, body a {
+    text-decoration: none; }
+  html label, body label {
+    font-weight: normal; }
+  html .hd .tip, body .hd .tip {
+    text-align: center;
+    padding: 18px 0;
+    font-size: 20px; }
+    html .hd .tip a, body .hd .tip a {
+      margin: 0 8px;
+      font-weight: bold; }
+  html .container-fluid .nav, body .container-fluid .nav {
+    background: #141414 url(../images/nav.jpg) no-repeat center;
+    background-size: 100% auto; }
+    html .container-fluid .nav a, body .container-fluid .nav a {
+      padding: 0;
+      height: 38px;
+      line-height: 38px;
+      text-decoration: none;
+      color: #bbbbbb; }
+  html .container-fluid .form input, body .container-fluid .form input {
+    margin-left: 0.33333rem;
+    margin-right: 0.5rem; }
+  html .container-fluid .form .cell, body .container-fluid .form .cell {
+    margin-bottom: 0.25rem; }
+  html .container-fluid .form .qt
+span, body .container-fluid .form .qt
+span {
+    margin-right: 0.13333rem; }
+  html .container-fluid .video, body .container-fluid .video {
+    width: 7.53333rem;
+    margin: 0 auto; }
+    html .container-fluid .video video, body .container-fluid .video video {
+      width: 100%; }
+  html .container-fluid .grey, body .container-fluid .grey {
+    background: #f2f2f2;
+    padding: 0.33333rem 0; }
+  html .container-fluid .center, body .container-fluid .center {
+    width: 9.13333rem;
+    margin: 0 auto; }
+    html .container-fluid .center p, body .container-fluid .center p {
+      margin: 0; }
+  html .container-fluid .txt1, body .container-fluid .txt1 {
+    padding-top: 0.33333rem; }
+  html .container-fluid .offset-bottom-16, body .container-fluid .offset-bottom-16 {
+    margin-bottom: 0.26667rem; }
+  html .container-fluid .textarea textarea, body .container-fluid .textarea textarea {
+    height: 2rem; }
+  html .container-fluid input[type='radio'], body .container-fluid input[type='radio'] {
+    width: 0.33333rem;
+    height: 0.33333rem; }
+  html .container-fluid .policy, body .container-fluid .policy {
+    border-radius: 0;
+    width: 0.23333rem;
+    height: 0.23333rem;
+    margin-right: 0.16667rem; }
+  html .container-fluid .cat, body .container-fluid .cat {
+    margin-bottom: 0.16667rem; }
+  html .container-fluid .txt.text-center, body .container-fluid .txt.text-center {
+    color: #222222; }
+    html .container-fluid .txt.text-center h5, body .container-fluid .txt.text-center h5 {
+      font-size: 0.26667rem;
+      font-weight: bold;
+      margin: 0.4rem auto; }
+    html .container-fluid .txt.text-center p, body .container-fluid .txt.text-center p {
+      margin: 0; }
+  html .container-fluid .txt, body .container-fluid .txt {
+    padding: 0;
+    margin-top: 0.66667rem;
+    margin-bottom: 0.66667rem;
+    margin-left: 0.46667rem;
+    margin-right: 0.46667rem;
+    font-size: 0.23333rem; }
+    html .container-fluid .txt p:nth-of-type(3), html .container-fluid .txt p:nth-of-type(4), html .container-fluid .txt p:nth-of-type(6), body .container-fluid .txt p:nth-of-type(3), body .container-fluid .txt p:nth-of-type(4), body .container-fluid .txt p:nth-of-type(6) {
+      margin: 0; }
+  html .container-fluid .story, body .container-fluid .story {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+    html .container-fluid .story .col-xs-6 .story-inner, body .container-fluid .story .col-xs-6 .story-inner {
+      height: 5.33333rem;
+      border: 1px solid #dac999;
+      margin-bottom: 0.23333rem; }
+      html .container-fluid .story .col-xs-6 .story-inner a, body .container-fluid .story .col-xs-6 .story-inner a {
+        font-size: 0.23333rem;
+        color: #222;
+        border-bottom: 1px solid #dadada;
+        letter-spacing: 0.01667rem; }
+    html .container-fluid .story .col-xs-6:nth-of-type(2n+1) .story-inner, body .container-fluid .story .col-xs-6:nth-of-type(2n+1) .story-inner {
+      margin-right: 0.15rem; }
+    html .container-fluid .story .col-xs-6:nth-of-type(2n) .story-inner, body .container-fluid .story .col-xs-6:nth-of-type(2n) .story-inner {
+      margin-left: 0.15rem; }
+    html .container-fluid .story .col-xs-6 img, body .container-fluid .story .col-xs-6 img {
+      margin-bottom: 0.26667rem; }
+    html .container-fluid .story .col-xs-6 .row p, body .container-fluid .story .col-xs-6 .row p {
+      margin-bottom: 0px;
+      margin-left: 0.13333rem;
+      line-height: 0.5rem; }
+      html .container-fluid .story .col-xs-6 .row p:before, body .container-fluid .story .col-xs-6 .row p:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: #000;
+        border-radius: 100%;
+        margin-right: 0.1rem; }
+  html .container-fluid a.btn, body .container-fluid a.btn {
+    display: inline-block;
+    width: 2.36667rem;
+    line-height: 0.5rem;
+    color: #e8d3d6;
+    font-size: 0.2rem;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0.66667rem;
+    background: #9e1b32 url(../images/arr.png) no-repeat 90% center;
+    background-size: 0.1rem auto; }
+  html .container-fluid .contact, body .container-fluid .contact {
+    padding-top: 0.83333rem;
+    padding-bottom: 0.58333rem;
+    border-top: 1px solid #e9e9e9;
+    font-size: 0.16667rem;
+    margin-left: 0.46667rem;
+    margin-right: 0.46667rem;
+    display: block;
+    overflow: auto; }
+    html .container-fluid .contact .code, body .container-fluid .contact .code {
+      margin-left: 0.36667rem; }
+    html .container-fluid .contact p, body .container-fluid .contact p {
+      margin-bottom: 0px; }
+  html .container-fluid .foot, body .container-fluid .foot {
+    background: #000;
+    overflow: auto; }
+    html .container-fluid .foot .title, body .container-fluid .foot .title {
+      padding: 0.41667rem 0 0.41667rem 0;
+      margin: 0 auto;
+      width: 9.1rem; }
+      html .container-fluid .foot .title img, body .container-fluid .foot .title img {
+        width: 7.61667rem; }
+    html .container-fluid .foot .txt, body .container-fluid .foot .txt {
+      margin: 0 auto;
+      width: 9.1rem;
+      padding: 0 0 0.63333rem 0; }
+      html .container-fluid .foot .txt p, body .container-fluid .foot .txt p {
+        font-size: 0.16667rem;
+        color: #fff;
+        margin-bottom: 0rem; }
+        html .container-fluid .foot .txt p a, body .container-fluid .foot .txt p a {
+          font-size: 0.16667rem;
+          color: #fff; }
+    html .container-fluid .foot .share, body .container-fluid .foot .share {
+      position: relative;
+      width: 9.1rem;
+      margin: 0.16667rem auto 0;
+      overflow: auto;
+      padding-bottom: 0.5rem; }
+      html .container-fluid .foot .share .col-xs-2 a img, body .container-fluid .foot .share .col-xs-2 a img {
+        width: auto;
+        height: 0.6rem; }
+      html .container-fluid .foot .share .row, body .container-fluid .foot .share .row {
+        font-size: 0.2rem;
+        color: #7e7e7e; }
+      html .container-fluid .foot .share .col-xs-5, body .container-fluid .foot .share .col-xs-5 {
+        line-height: 0.5rem; }
+      html .container-fluid .foot .share .col-xs-7 a, body .container-fluid .foot .share .col-xs-7 a {
+        display: inline-block;
+        width: 33%; }
+      html .container-fluid .foot .share .col-xs-7 img, body .container-fluid .foot .share .col-xs-7 img {
+        width: auto;
+        height: 0.35rem; }
+  html .drive input, html .drive select, body .drive input, body .drive select {
+    border-radius: 0;
+    height: 0.33333rem; }
+  html .drive *, body .drive * {
+    font-size: 0.23333rem; }
+  html .drive .offset-top-40, body .drive .offset-top-40 {
+    margin-top: 0.66667rem; }
+  html .drive .offset-bottom-20, body .drive .offset-bottom-20 {
+    margin-bottom: 0.33333rem; }
+  html .drive .offset-bottom-10, body .drive .offset-bottom-10 {
+    margin-bottom: 0.16667rem;
+    overflow: auto; }
+  html .drive .offset-top-30, body .drive .offset-top-30 {
+    margin-top: 0.5rem; }

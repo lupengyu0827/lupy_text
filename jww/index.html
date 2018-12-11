@@ -1,0 +1,311 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>欢乐夹年华</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--盒子-->
+		<div class="box disno">
+			<div class="top">
+				<img src="images/logo.png" />
+				<p class="top_screen fr guanq">关卡<span class="guanqia">1</span>/3</p>
+				<p class="top_time fr"><span class="miao">15</span>S</p>
+			</div>
+			<div class="banner_1"><img src="images/top_banner.png" alt="" /></div>
+			<div class="page1">
+				<img src="images/page1_bg.png" />
+				<div class="page1_btn">
+					<img class="start" src="images/start.png" />
+					<img class="gzsm" style="float: right;" src="images/gzsm.png" />
+				</div>
+				<div class="gz_bg">
+					<div>
+						<img class="gz_close" src="images/gz_close.png" />
+						<img class="gz_img" src="images/gz.png" />
+						<div class="gz_enter"></div>
+					</div>
+				</div>
+				<div class="gz_bg2" style="display: none;">
+					<div>
+						<img class="gz_close" src="images/gz_close.png" />
+						<img class="gz_img" src="images/go_dati.png" />
+						<div class="gz_dati"></div>
+					</div>
+				</div>
+			</div>
+			<div class="page2" style="display: none; position: relative;">
+			</div>
+		</div>
+		<div class="box2 disno" style="display: none;">
+			<div class="top">
+				<img src="images/logo.png" />
+			</div>
+			<img class="tennis" src="images/tennis.png" />
+		</div>
+		<div class="box3 disno" style="display: none;">
+			<div class="go_dati"></div>
+		</div>
+		<div class="box4 disno" style="display: none;">
+			<img class="logo" src="images/logo.png" />
+			<p class="top_screen  dati">答题<span class="tihao">1</span>/3</p>
+			<ul class="tiku">
+				<!--<li class="tiku_main">
+					<p>1.奔驰在华重塑的品牌理念是？</p>
+					<p class="tiku_main_on" data-id='1' ><i>A</i><span>由“心”指引，书写你的传奇</span></p>
+					<p class="tiku_main_on" data-id='2' ><i>B</i><span>别赶路，去感受路</span></p>
+					<p class="tiku_main_on" data-id='1' ><i>C</i><span>行动•成就•未来</span></p>
+					<p class="tiku_main_on" data-id='1' ><i>D</i><span>心所向，驰以恒</span></p>
+				</li>-->
+			</ul>
+			<img class="DT_an DT_loser" src="images/DT_loser.jpg" />
+			<img class="DT_an DT_win" src="images/DT_win.jpg" />
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/wwj.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		window.onload = function() {
+				$.get('page2.html', function(data) {
+					$('.page2').html(data);
+				})
+				//			//获取用户几乎 一天一次机会
+				//			var b = window.localStorage.getItem('userType');
+				//			if( b != undefined ){
+				//				// 取值
+				//				var c = JSON.parse(b);    // 将 JSON 字符串转成对象
+				//				var time = c.time;
+				//				var date = getNowFormatDate(c.date)
+				//				if ( parseInt(  Date.parse( date+' 23:59:59' ) ) <  Date.parse(new Date()) ) {
+				//				    // 如果 date + time 小于当前时间的时间戳，说明已经超过3600秒的时效时间
+				//				    $('.gz_bg').show();
+				//					$('.gz_bg2').hide();
+				//				}else{
+				//				   	$('.gz_bg').hide();
+				//					$('.gz_bg2').show();
+				//				}
+				//			}
+
+				var newTimes;
+				//点击规则说明	
+				$('.gzsm').bind('click', function() {
+					$('.gz_bg').show();
+				})
+				//首页 规则 关闭
+				$('.gz_close,.gz_enter').bind('click', function() {
+					$('.gz_bg,.gz_bg2').hide();
+				})
+
+				function getMyDate(str) {
+					var oDate = new Date(str),
+						oYear = oDate.getFullYear(),
+						oMonth = oDate.getMonth() + 1,
+						oDay = oDate.getDate(),
+						oHour = oDate.getHours(),
+						oMin = oDate.getMinutes(),
+						oSen = oDate.getSeconds(),
+						oTime = oYear + '/' + getzf(oMonth) + '/' + getzf(oDay) + ' ' + getzf(oHour) + ':' + getzf(oMin) + ':' + getzf(oSen); //最后拼接时间        
+					return oTime;
+				};
+
+				function getzf(num) {
+					if(parseInt(num) < 10) {
+						num = '0' + num;
+					}
+					return num;
+				}
+
+				function getMoth(str) {
+					var oDate = new Date(str),
+						oYear = oDate.getFullYear(),
+						oMonth = oDate.getMonth() + 1,
+						oDay = oDate.getDate(),
+						oTime =oYear + '/' + getzf(oMonth) + '/' + getzf(oDay); //最后拼接时间           
+						return oTime;
+					}
+					//点击开始按钮  游戏开始
+					$('.start').bind('click', function() {
+						var b = window.localStorage.getItem('userType');
+						if(b != undefined) {
+							// 取值
+							var c = JSON.parse(b); // 将 JSON 字符串转成对象
+							var time = c.time;
+							var date = c.date;
+								date = getMoth(date)+' 23:59:59'; //'2018/09/26 23:59:59' //
+							console.log(date)
+							var nowDate = new Date();
+								nowDate = getMyDate(nowDate)
+							console.log(new Date(nowDate));
+							console.log(new Date(date)< new Date(nowDate))
+							if( new Date(date) - new Date(nowDate) < 0 ) {
+								// 如果 date + time 小于当前时间的时间戳，说明已经超过3600秒的时效时间
+								$('.page1').hide();
+								$.get('page2.html', function(data) {
+									$('.page2').html(data);
+									new wwj(1);
+								})
+								$('.page2').show();
+								$('.fr').show();
+							} else {
+								$('.gz_bg').hide();
+								$('.gz_bg2').show();
+							}
+						} else {
+							$('.page1').hide();
+							$.get('page2.html', function(data) {
+								$('.page2').html(data);
+								new wwj(1);
+							})
+							$('.page2').show();
+							$('.fr').show();
+						}
+					})
+					//点击去答题
+					$('.go_dati').bind('click', function() {
+						$('.disno').hide();
+						$('.box4').show();
+						goDaTi();
+					})
+					$('.gz_dati').bind('click', function() {
+						$('.disno').hide();
+						$('.box4').show();
+						goDaTi();
+					})
+
+					//控制背景图比例 750 1452
+					var width = $('body').width();
+					var wHeight = $('body').height();
+					if(wHeight > 726) {
+						var height = (width * 1452) / 750;
+						$('.box2,.box3').css('height', height);
+					}
+
+					function goDaTi() {
+						//随机获取题目
+						$('.tiku').html('')
+						$.getJSON('js/timu.json', function(obj) {
+							var min = 0;
+							var max = obj.length - 2;
+							var arr = [];
+							var Range = max - min;
+							for(var i = 0; i < 3; i++) {
+								var Rand = Math.random();
+								var num = min + Math.round(Rand * Range); //四舍五入
+								arr.push(num);
+							}
+							var html = '';
+							console.log(arr)
+							for(var i = 0; i < arr.length; i++) {
+								var list = obj[arr[i]];
+								html += '<li class="tiku_main">'
+								html += '<p>' + list.title + '</p>'
+								//添加正确答案的data-id； 正确为2 错误为1
+								if(list.result == 'A') {
+									html += '<p class="tiku_main_on" data-id="2" ><i>A</i><span>' + list.A + '</span></p>'
+								} else {
+									html += '<p class="tiku_main_on" data-id="1" ><i>A</i><span>' + list.A + '</span></p>'
+								}
+								if(list.result == 'B') {
+									html += '<p class="tiku_main_on" data-id="2" ><i>B</i><span>' + list.B + '</span></p>'
+								} else {
+									html += '<p class="tiku_main_on" data-id="1" ><i>B</i><span>' + list.B + '</span></p>'
+								}
+								if(list.C != undefined) {
+									if(list.result == 'C') {
+										html += '<p class="tiku_main_on" data-id="2" ><i>C</i><span>' + list.C + '</span></p>'
+									} else {
+										html += '<p class="tiku_main_on" data-id="1" ><i>C</i><span>' + list.C + '</span></p>'
+									}
+								}
+								if(list.D != undefined) {
+									if(list.result == 'D') {
+										html += '<p class="tiku_main_on" data-id="2" ><i>D</i><span>' + list.D + '</span></p>'
+									} else {
+										html += '<p class="tiku_main_on" data-id="1" ><i>D</i><span>' + list.D + '</span></p>'
+									}
+								}
+								html += '</li>'
+							}
+							$('.tiku').html(html)
+							var pLength = $('.tiku_main').length;
+							var DDSX = 0; //第几题
+							var Z = 0; //记录答对几题
+							//答题
+							var btn = true;
+							$('.tiku_main').eq(0).show();
+							$('.tiku_main .tiku_main_on').bind('click', function() {
+								if(btn) {
+									clearInterval();
+									// 获取当前点击序号  2设置为正确答案 其他的为1
+									var tiType = $(this).attr('data-id');
+									if(tiType == 2) {
+										$(this).find('i').addClass('dui');
+										Z++;
+									} else {
+										$(this).find('i').addClass('cuo');
+									}
+									// 显示正确答案
+									var length = $(this).parent().find('.tiku_main_on').length;
+									for(var i = 0; i < length; i++) {
+										var cType = $(this).parent().find('.tiku_main_on').eq(i).attr('data-id');
+										if(cType == 2) {
+											$(this).parent().find('.tiku_main_on').eq(i).find('i').addClass('dui');
+											$(this).parent().find('.tiku_main_on').eq(i).find('span').append('（正确答案）')
+										}
+
+									}
+									DDSX++;
+									btn = false;
+									setTimeout(function() {
+										if(DDSX == 3) {
+											if(Z >= 2) {
+												$('.DT_win').show();
+												setTimeout(function() {
+													$('.box4 ,.DT_win').hide();
+													$('.box ').show();
+													$('.tihao').html('1');
+													$('.gz_bg2').hide();
+													$('.page1').hide();
+													$('.page2').show();
+													$('.fr').show();
+													$.get('page2.html', function(data) {
+														$('.page2').html(data);
+														new wwj(1);
+													})
+												}, 1000)
+											} else {
+												$('.DT_loser').show();
+												setTimeout(function() {
+													$('.box4 ,.DT_loser').hide();
+													$('.tihao').html('1');
+													$('.disno').hide();
+													$('.box ').show();
+													$('.page1').show();
+													$('.gz_bg2').show();
+													$('.fr').hide();
+												}, 1000)
+											}
+										} else {
+											$('.tiku_main').hide();
+											$('.tihao').html(DDSX + 1)
+											$('.tiku_main').eq(DDSX).show();
+											return btn = true;
+										}
+									}, 1000);
+								}
+							});
+						})
+					}
+
+				} //window.onload结束
+	</script>
+
+</html>

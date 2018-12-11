@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<title>够出色就上榜</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/view.css"/>
+	</head>
+	<body>
+		<div id="viewBg">
+			<div class="score">99</div>
+			<div class="timers">
+				<div class="minute">
+					<img class="minute1" src="images/0.png"/>
+					<img class="minute2" src="images/0.png"/>
+				</div>
+				<div class="second">
+					<img class="second1" src="images/0.png"/>
+					<img class="second2" src="images/0.png"/>
+				</div>
+			</div>
+			<div class="ckbd"></div>
+			<div class="zctz"></div>
+			<div class="dsyx"></div>
+		</div>
+		
+		<!--   背景遮罩层       -->
+		<div class="prompt2">
+			<div class="promptBg"></div>
+			<img src="images/share.png"/>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var min = getQueryStringByName('minute');
+		var sec = getQueryStringByName('second');
+		if( min < 10 ){
+			$('.minute2').attr('src','images/'+ min +'.png');
+		}else{
+			minute1 = min.toString();
+	      	newmin= minute1.substring(0,1);
+	      	newmin2 = minute1.substring(1,2);
+			$('.minute1').attr('src','images/'+ newmin +'.png');
+			$('.minute2').attr('src','images/'+ newmin2 +'.png');
+		}
+		if( sec < 10 ){
+			$('.second2').attr('src','images/'+ sec +'.png');
+		}else{
+			second1 = sec.toString();
+      		newsec=second1.substring(0,1);
+	      	newsec2 = second1.substring(1,2);
+	      	$('.second1').attr('src','images/'+newsec+'.png');
+	      	$('.second2').attr('src','images/'+newsec2+'.png');
+		}
+		
+		
+		
+		
+//		30s-60s 完成挑战计打败99%的挑战者
+//		60s-75s完成挑战计打败95%的挑战者
+//		75s-90s 完成挑战计打败90%的挑战者
+//		90s-120s 完成挑战计打败85%的挑战者
+//		120s-140s 完成挑战计打败80%的挑战者
+//		140s-180s  完成挑战计打败70%的挑战者
+//		180s-360s  完成挑战计打败50%的挑战者
+//		360s-420s完成挑战计打败30%的挑战者
+//		420s以上完成挑战计打败10%的挑战者
+//		min sec
+		
+		var score = parseInt(min*60)+ parseInt(sec);
+		
+		if( 0 < score && score <= 60 ){
+			$('.score').text('99');
+		}else if( 60 < score && score <= 75 ){
+			$('.score').text('95');
+		}else if( 75 < score && score <= 90 ){
+			$('.score').text('90');
+		}else if( 90 < score && score <=120 ){
+			$('.score').text('85');
+		}else if( 120 < score && score <= 140 ){
+			$('.score').text('80');
+		}else if( 140 < score && score <= 180 ){
+			$('.score').text('70');
+		}else if( 180 < score && score <= 360 ){
+			$('.score').text('50');
+		}else if( 360 < score && score <= 420 ){
+			$('.score').text('30');
+		}else if( 420 < score){
+			$('.score').text('10');
+		}
+		
+		
+		$('.ckbd').bind('click',function(){
+			window.location.href = 'paihangbang.html?minute='+min+'&second='+sec;
+		})
+		$('.zctz').bind('click',function(){
+			window.location.href = 'gameStart.html';
+		})
+		$('.dsyx').bind('click',function(){
+			$('.prompt2').show()
+		})
+		$('.promptBg').bind('click',function(){
+			$('.prompt2').hide()
+		})
+	</script>
+</html>

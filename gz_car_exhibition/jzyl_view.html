@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.jzyl_view_title img{
+				width: 7.773333rem;
+				height: initial;
+				margin-left: 0.56rem;
+				margin-top: 0.52rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="jzyl_view_bg">
+			<img class="view_close" src="images/close.png"/>
+			<div class="view_main v1" style="display: none;">
+				<img class="view_main_img" src="images/zlqc_pic.png"/>
+				<!--<p class="view_title">智绘新愿</p>-->
+				<p class="jzyl_view_title">
+					<img src="images/zlqc.png"/>
+				</p>
+				<!--<p class="view_con">-->
+				<!--</p>-->
+			</div>
+			<div class="view_main v2" style="display: none;">
+				<img class="view_main_img" src="images/zyxy_pic.png"/>
+				<p class="jzyl_view_title">
+					<img src="images/zyxy.png"/>
+				</p>
+			</div>
+			<div class="view_main v3" style="display: none;">
+				<img class="view_main_img" src="images/zhxy_pic.png"/>
+				<p class="jzyl_view_title">
+					<img src="images/zhxy.png"/>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.view_close').bind('click',function(){
+			window.location.href = 'jzyl_list.html?type=jzyl' 
+		})
+		var id = getQueryStringByName('id')
+		 if( id == 1 ){
+		 	$('.v1').show();
+		 }else if( id==2 ){
+		 	$('.v2').show();
+		 }else{
+		 	$('.v3').show();
+		 }
+	</script>
+
+</html>

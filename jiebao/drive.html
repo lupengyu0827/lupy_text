@@ -1,0 +1,753 @@
+﻿
+<p>
+    <span id="2685675" style="display: none !important; font-size:0; line-height:0"></span>
+
+</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jaguar China</title>
+    <meta charset="utf-8">
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+          name="viewport" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" href="css/mui.min.css">
+
+    <style type="text/css">
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        button {
+            -webkit-appearance: none;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            background-color: #ebebeb;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            font-family: Jaguar, Arial, Helvetica, Sans-Serif;
+        }
+
+        html {
+            width: 100%;
+        }
+
+        a[href^="tel"],
+        a[href^="sms"] {
+            text-decoration: none;
+            color: #ffffff;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 479px) {
+            body[yahoo] .deviceWidth {
+                width: 100%;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth2 {
+                width: 340px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth3 {
+                width: 320px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth4 {
+                width: 180px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth5 {
+                width: 75px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth6 {
+                height: 200px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth7 {
+                width: 85px;
+                height: 35px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth8 {
+                height: 35px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth10 {
+                height: 20px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth11 {
+                width: 20px;
+                height: 0px;
+                !important;
+            }
+
+            body[yahoo] .menu {
+                margin: 10px !important;
+            }
+
+            body[yahoo] .menu2 {
+                width: 61px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth12 {
+                width: 295px;
+                !important;
+            }
+
+            body[yahoo] .deviceWidth13 {
+                width: 120px;
+                !important;
+            }
+        }
+
+        .sr1 {
+            border: 1px solid #8b8b8b;
+            LINE-HEIGHT: 18px;
+            PADDING-LEFT: 5px;
+            FONT-FAMILY: Arial, 微软雅黑, 宋体;
+            BACKGROUND: #ffffff;
+            HEIGHT: 25px;
+            COLOR: #000000;
+            FONT-SIZE: 12px;
+            width: 150px;
+        }
+
+        .sr3 {
+            border: 1px solid #8b8b8b;
+            LINE-HEIGHT: 18px;
+            PADDING-LEFT: 5px;
+            FONT-FAMILY: Arial, 微软雅黑, 宋体;
+            BACKGROUND: #ffffff;
+            HEIGHT: 29px;
+            COLOR: #000000;
+            FONT-SIZE: 12px;
+            width: 100px;
+        }
+
+        .sbutton {
+            background: #9e1a32;
+            height: 30px;
+            width: 120px;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 12px;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+        }
+
+        input[type=text] {
+            width: 157px;
+            height: 29px;
+            padding: 0 5px !important;
+            margin-bottom: 0 !important;
+        }
+
+        select {
+            padding: 0 5px !important;
+            border: 1px solid #CCCCCC !important;
+            margin-bottom: 0 !important;
+        }
+
+        label {
+            position: relative;
+            top: -2px;
+            left: 3px;
+        }
+
+        .btm {
+            position: relative;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 15%;
+            width: 15%;
+            float: left;
+            opacity: 0;
+        }
+
+            .link:nth-of-type(1) {
+                left: 5%;
+            }
+
+            .link:nth-of-type(2) {
+                left: 20%;
+            }
+
+            .link:nth-of-type(3) {
+                left: 35%;
+            }
+
+            .link:nth-of-type(4) {
+                left: 38%;
+                bottom: 60%;
+            }
+
+        .share {
+            display: inline-block;
+            position: absolute;
+            bottom: 25%;
+            width: 40%;
+            left: 60%;
+        }
+
+        .share-inner {
+            position: relative;
+        }
+
+            .share-inner a {
+                display: inline-block;
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                width: 10%;
+            }
+
+                .share-inner a:nth-of-type(1) {
+                    right: 32%;
+                }
+
+                .share-inner a:nth-of-type(2) {
+                    right: 20%;
+                }
+    </style>
+    <script language="JavaScript">
+        function check() {
+            var regPartton = /1[3-8]+\d{9}/;
+            var isValidEmail = function ($email) {
+                var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                return filter.test($email);
+            };
+            if ($("#username").val() == "") {
+                alert('请输入您的姓名.');
+                $("#username").focus();
+                return false;
+            }
+            if ($("#mobile").val() == "" || $("#mobile").val() == null) {
+                alert('请输入您的手机号码！');
+                $("#mobile").focus();
+                return false;
+            } else if (!regPartton.test($("#mobile").val())) {
+                alert('请输入正确的手机号码！');
+                $("#mobile").focus();
+                return false;
+            }
+            //邮箱判断
+            var emailReg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+            if ($("#mailaddress").val() == "") {
+                alert("请输入您的邮箱地址");
+                return false;
+            } else if (!emailReg.test($("#mailaddress").val())) {
+                alert("邮箱地址有误，请核对");
+                return false;
+            }
+            if ($("#model").val() == "0") {
+                alert('请选择捷豹车型.');
+                $("#model").focus();
+                return false;
+            }
+        }
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return unescape(r[2]);
+            return null; //返回参数值
+        }
+
+        function submitClick() {
+            $("#submit").click();
+        }
+
+    </script>
+</head>
+
+<body leftmargin="0" marginheight="0" marginwidth="0" topmargin="0" yahoo="fix">
+    <center>
+        <table class="deviceWidth" align="center" border="0" cellpadding="0" cellspacing="0"
+               width="600">
+            <tbody>
+                <tr>
+                    <td style="border-right: solid 1px #282828; background: #171717;" align="center"
+                        width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/index.html">全部车型</a>
+
+                    </td>
+                    <td style="border-right: solid 1px #282828; background: #171717;" align="center"
+                        width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/xe/index.html">XEL</a>
+
+                    </td>
+                    <td style="border-right: solid 1px #282828; background: #171717;" align="center"
+                        width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/xf/index.html">XF</a>
+
+                    </td>
+                    <td style="border-right: solid 1px #282828; background: #171717;" align="center"
+                        width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/xj/index.html">XJ</a>
+
+                    </td>
+                    <td style="border-right: solid 1px #282828; background: #171717;" align="center"
+                        width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/F-Type/index.html">F-TYPE</a>
+
+                    </td>
+                    <td style="background: #171717;" align="center" width="140" height="36">
+                        <a style="color: #ffffff; font-family: Microsoft YaHei; font-size: 12px; font-weight: normal; text-decoration: none;"
+                           href="http://www.jaguar.com.cn/jaguar-range/f-pace/index.html">F-PACE</a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="0"
+                   class="deviceWidth" bgcolor="#FFFFFF">
+                <tr>
+                    <td><img src="images/jb_02.jpg" width="100%"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="color: #666; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px;width: 90%;     margin-top: 40px; margin-left:auto; margin-right: auto">即刻填写如下完整资料即可预约试驾，还有机会获得捷豹精美礼品。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;</td>
+                </tr>
+            </table>
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="0"
+                   class="deviceWidth" bgcolor="#FFFFFF">
+                <tr>
+                    <td style="background-color:#fff">
+                        <div style=" border-top: 1px #e9e9e9 solid">
+                            <table width="570" border="0" align="center" cellpadding="0" cellspacing="0"
+                                   class="deviceWidth">
+                                <tr>
+                                    <td style="color: #999; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px;">
+                                        <div style=" width: 90%;margin-top:10px;margin-left:auto; margin-right: auto" "><span style=" color #000;">敬请正确填妥您的贵宾信息。</span>（温馨提醒：带*选项为必填项）</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #666; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #666; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px">
+                                        <table style="width: 90%;text-align: left;margin-left: 2%;">
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right">*</span>姓名:</td>
+                                                <td>
+                                                    <input name="username" type="text" id="username" class="sr1" size="9"
+                                                           type="text" name="username" style="" />&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right">*</span>称谓:</td>
+                                                <td>
+                                                    <table id="sex" name="sex" border="0" style="width:120px;">
+                                                        <tr>
+                                                            <td style="font-size: 14px;">
+                                                                <input id="sex_0" type="radio" name="sex" value="男" />
+                                                                <label for="sex_0">先生</label>
+                                                            </td>
+                                                            <td style="font-size: 14px;">
+                                                                <input id="sex_1" type="radio" name="sex" value="女" />
+                                                                <label for="sex_1">女士</label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right">*</span>手机:</td>
+                                                <td>
+                                                    <input name="mobile" type="text" id="mobile" class="sr1" size="12" type="text"
+                                                           name="mobile" style="" />
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right"></span>邮寄地址:</td>
+                                                <td>
+                                                    <select style="width: 40%;" name="province" id="province" onchange="InitCity(this.options[this.options.selectedIndex].text)"
+                                                            class="sr3" style="-webkit-appearance:menulist"></select>
+                                                    <select style="width: 40%;" name="city" id="city" class="sr3" style="-webkit-appearance:menulist"></select>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right"></span></td>
+                                                <td>
+                                                    <input name="address" type="text" id="address" class="sr1" size="21"
+                                                           type="text" name="address" placeholder="" />
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right"></span>电子邮箱:</td>
+                                                <td>
+                                                    <input name="mailaddress" type="text" id="mailaddress" class="sr1" size="12"
+                                                           type="text" name="mailaddress" />
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 40px;">
+                                                <td style="width: 120px;font-size: 14px;"> <span style="width: 10px; display: inline-block; text-align: right">*</span>您感兴趣的车型:</td>
+                                                <td style="font-size: 14px;">
+                                                    <select name="model" id="model" class="sr1" name="model" style="height:29px;width:155px;-webkit-appearance:menulist">
+                                                        <option value="">请选择</option>
+                                                        <option value="A.捷豹F-PACE">A.捷豹F-PACE</option>
+                                                        <option value="B.捷豹XFL">B.捷豹XFL</option>
+                                                        <option value="C.捷豹F-TYPE">C.捷豹F-TYPE</option>
+                                                        <option value="D.捷豹XJ">D.捷豹XJ</option>
+                                                        <option value="E.捷豹XE">E.捷豹XEL</option>
+                                                        <option value="F.捷豹E-PACE">F.捷豹E-PACE</option>
+                                                        <option value="G.捷豹I-PACE">G.捷豹I-PACE</option>
+                                                        <option value="H.捷豹XF Sportbrake">H.捷豹XF Sportbrake</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 14px;" height="35"><span style="width: 10px; display: inline-block; text-align: right"></span>索要产品手册:</td>
+                                                <td height="35">
+                                                    <table id="uvin" name="uvin" border="0" style="width:120px;">
+                                                        <tr>
+                                                            <td style="font-size: 14px;">
+                                                                <input id="uvin_0" type="radio" name="uvin" value="是" />
+                                                                <label for="uvin_0">是</label>
+                                                            </td>
+                                                            <td style="font-size: 14px;">
+                                                                <input id="uvin_1" type="radio" name="uvin" value="否" />
+                                                                <label for="uvin_1">否</label>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #666; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #999; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #999; font-family: Jaguar,Arial,Helvetica,Sans-Serif; font-size: 13px; font-weight: normal; line-height: 20px">
+                                        <div style=" margin-left:10px;">* 捷豹中国郑重承诺：您的信息将只用于捷豹中国及经销商的市场研究，以更好地为您提供服务，这些信息绝不会透漏给任何第三方。</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="50">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" background-color:#fff; height:100px;">
+                        <table cellpadding="0" cellspacing="0" class="deviceWidth2"
+                               align="center">
+                            <tr>
+                                <td bgcolor="#FFFFFF" height="30">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="50%" align="left">
+                                    <input name="nxinhao" type="hidden" id="nxinhao" />
+                                    <input name="Button1" value="提交   >" type="submit" id="Button1" class="sbutton" style="border-style:None;cursor: pointer; border-radius: 0; background: #9e1a32;border-color:#9e1a32" />
+                                </td>
+                                <td width="50%" align="right">
+                                    <div style="background:#9e1a32; height:30px; width:120px; line-height:30px; margin-left:30px;   text-align:center;">
+                                        <a href="index.html"
+                                           target="_blank" style="text-decoration:none;color:#fff; font-weight:bold; font-size:12px;cursor: pointer;">
+                                            返回首页&nbsp; &gt;
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFFFFF" height="30">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="deviceWidth" align="center" border="0" cellpadding="0" cellspacing="0"
+               width="600">
+            <tbody>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <div style=" font-size:11px; border-top: 1px solid #ccc; width: 90%; color:#918f8f; line-height:18px;font-family:微软雅黑;  padding-top: 48px; padding-bottom: 38px; margin: 0 auto;">
+                            <div style=" float:left;margin-right: 6px;">
+                                <img src="images/code.jpg" />
+                            </div>
+                            <p style=" font-size: 12px">欲了解更多详情.</p>
+                            <p style=" font-size: 12px">敬请致电捷豹中国贵宾专线 400-820-8955</p>
+                            <p style=" font-size: 12px">或扫描二维码加入捷豹中国JAGUAR官方微信</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btm" style="width: 100%; max-width: 600px;">
+            <img src="images/bottom.jpg" alt="" style="max-width: 600px; width: 100%; margin: 0 auto">
+            <a class="link" style="" href="http://dealer.jaguar.com.cn/">1</a>
+            <a class="link" style="" href="https://jdxforms.jaguar.com.cn/request-a-test-drive/?">3</a>
+            <a class="link" style="" href="https://weibo.com/jaguarcn">4</a>
+            <a class="link" style="" href="https://www.jaguar.com.cn/privacy-legal.html">4</a>
+            <div class="share">
+                <div class="share-inner">
+                    <a href="https://www.douban.com/share/service?name=捷豹中国&url=">2</a>
+                    <a href="http://service.weibo.com/share/share.php?title=捷豹中国&url=">2</a>
+                </div>
+
+            </div>
+        </div>
+    </center>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script language="javascript">
+        <!--
+        	function Hashtable() {
+        		this._hash = new Object();
+        		//add()
+        		this.add = function(key, value) {
+        				if (typeof(key) != "undefined") {
+        					if (this.contains(key) == false) {
+        						this._hash[key] = typeof(value) == "undefined" ? null : value;
+        						return true;
+        					} else {
+        						return false;
+        					}
+        				} else {
+        					return false;
+        				}
+        			}
+        			//remove()
+        		this.remove = function(key) {
+        				delete this._hash[key];
+        			}
+        			//count
+        		this.count = function() {
+        				var i = 0;
+        				for (var k in this._hash) {
+        					i++;
+        				}
+        				return i;
+        			}
+        			//items
+        		this.items = function(key) {
+        				return this._hash[key];
+        			}
+        			//contains
+        		this.contains = function(key) {
+        				return typeof(this._hash[key]) != "undefined";
+        			}
+        			//clear
+        		this.clear = function() {
+        			for (var k in this._hash) {
+        				delete this._hash[k];
+        			}
+        		}
+        	}
+        	var provinceString = "省份|'',安徽|安徽,北京|北京,重庆|重庆,福建|福建,甘肃|甘肃,广东|广东,广西|广西," +
+        		"贵州|贵州,海南|海南,河北|河北,黑龙江|黑龙江,河南|河南,湖北|湖北,湖南|湖南,江西|江西,江苏|江苏,吉林|吉林," +
+        		"辽宁|辽宁,内蒙古|内蒙古,宁夏|宁夏,青海|青海,山东|山东,上海|上海,山西|山西,陕西|陕西," +
+        		"四川|四川,天津|天津,新疆|新疆,西藏|西藏,云南|云南,浙江|浙江,澳门|澳门," +
+        		"香港|42,台湾|43";
+        	var provinceArray = provinceString.split(',');
+        	var cityHT = new Hashtable();
+        	cityHT.add("请选择", "");
+        	cityHT.add("安徽", "城市,合肥,芜湖,蚌埠,马鞍山,淮北,铜陵,安庆,黄山,滁州,宿州,池州,淮南,巢湖,阜阳,六安,宣城,亳州");
+        	cityHT.add("北京", "城市,北京");
+        	cityHT.add("重庆", "城市,重庆");
+        	cityHT.add("福建", "城市,福州,厦门,莆田,三明,泉州,漳州,南平,龙岩,宁德");
+        	cityHT.add("甘肃", "城市,兰州,嘉峪关,金昌,白银,天水,酒泉,张掖,武威,定西,陇南,平凉,庆阳,临夏,甘南");
+        	cityHT.add("广东", "城市,广州,深圳,珠海,汕头,东莞,中山,佛山,韶关,江门,湛江,茂名,肇庆,惠州,梅州,汕尾,河源,阳江,清远,潮州,揭阳,云浮");
+        	cityHT.add("广西", "城市,南宁,柳州,桂林,梧州,北海,防城港,钦州,贵港,玉林,南宁地区,柳州地区,贺州,百色,河池");
+        	cityHT.add("贵州", "城市,贵阳,六盘水,遵义,安顺,铜仁,黔西南,毕节,黔东南,黔南");
+        	cityHT.add("海南", "城市,海南");
+        	cityHT.add("河北", "城市,石家庄,邯郸,邢台,保定,张家口,承德,廊坊,唐山,秦皇岛,沧州,衡水");
+        	cityHT.add("黑龙江", "城市,哈尔滨,齐齐哈尔,牡丹江,佳木斯,大庆,绥化,鹤岗,鸡西,黑河,双鸭山,伊春,七台河,大兴安岭");
+        	cityHT.add("河南", "城市,郑州,开封,洛阳,平顶山,安阳,鹤壁,新乡,焦作,濮阳,许昌,漯河,三门峡,南阳,商丘,信阳,周口,驻马店,济源");
+        	cityHT.add("湖北", "城市,武汉,宜昌,荆州,襄樊,黄石,荆门,黄冈,十堰,恩施,潜江,天门,仙桃,随州,咸宁,孝感,鄂州");
+        	cityHT.add("湖南", "--城市--,长沙,常德,株洲,湘潭,衡阳,岳阳,邵阳,益阳,娄底,怀化,郴州,永州,湘西,张家界");
+        	cityHT.add("江西", "城市,南昌市,景德镇,九江,鹰潭,萍乡,新馀,赣州,吉安,宜春,抚州,上饶");
+        	cityHT.add("江苏", "城市,南京,镇江,苏州,南通,扬州,盐城,徐州,连云港,常州,无锡,宿迁,泰州,淮安");
+        	cityHT.add("吉林", "城市,长春,吉林,四平,辽源,通化,白山,松原,白城,延边");
+        	cityHT.add("辽宁", "城市,沈阳,大连,鞍山,抚顺,本溪,丹东,锦州,营口,阜新,辽阳,盘锦,铁岭,朝阳,葫芦岛");
+        	cityHT.add("内蒙古", "--城市--,呼和浩特,包头,乌海,赤峰,呼伦贝尔盟,阿拉善盟,哲里木盟,兴安盟,乌兰察布盟,锡林郭勒盟,巴彦淖尔盟,伊克昭盟");
+        	cityHT.add("宁夏", "城市,银川,石嘴山,吴忠,固原");
+        	cityHT.add("青海", "城市,西宁,海东,海南,海北,黄南,玉树,果洛,海西");
+        	cityHT.add("山东", "城市,济南,青岛,淄博,枣庄,东营,烟台,潍坊,济宁,泰安,威海,日照,莱芜,临沂,德州,聊城,滨州,菏泽");
+        	cityHT.add("上海", "城市,上海");
+        	cityHT.add("山西", "城市,太原,大同,阳泉,长治,晋城,朔州,吕梁,忻州,晋中,临汾,运城");
+        	cityHT.add("陕西", "城市,西安,宝鸡,咸阳,铜川,渭南,延安,榆林,汉中,安康,商洛");
+        	cityHT.add("四川", "城市,成都,绵阳,德阳,自贡,攀枝花,广元,内江,乐山,南充,宜宾,广安,达川,雅安,眉山,甘孜,凉山,泸州");
+        	cityHT.add("天津", "城市,天津");
+        	cityHT.add("新疆", "城市,乌鲁木齐,石河子,克拉玛依,伊犁,巴音郭勒,昌吉,克孜勒苏柯尔,克孜,博尔塔拉,吐鲁番,哈密,喀什,和田,阿克苏");
+        	cityHT.add("西藏", "城市,拉萨,日喀则,山南,林芝,昌都,阿里,那曲");
+        	cityHT.add("云南", "城市,昆明,大理,曲靖,玉溪,昭通,楚雄,红河,文山,思茅,西双版纳,保山,德宏,丽江,怒江,迪庆,临沧");
+        	cityHT.add("浙江", "城市,杭州,宁波,温州,嘉兴,湖州,绍兴,金华,衢州,舟山,台州,丽水");
+        	cityHT.add("澳门", "城市,澳门");
+        	cityHT.add("香港", "城市,香港");
+        	cityHT.add("台湾", "城市,台湾");
+
+        	function GetNameFromString(str) {
+        		return str.split('|')[0];
+        	}
+
+        	function GetIDFromString(str) {
+        		return str.split('|')[1];
+        	}
+
+        	function InitProvince() {
+        		document.getElementById("province").options.length = 0;
+        		for (var i = 0; i < provinceArray.length; ++i) {
+        			provStr = provinceArray[i];
+        			document.getElementById("province").options[i] = new Option(GetNameFromString(provStr), GetIDFromString(provStr));
+        		}
+        		//    document.getElementById("province").options[18].selected=true;
+        	}
+
+        	function InitCity(provinceName) {
+        		var cityArray = cityHT.items(provinceName).split(',');
+        		document.getElementById("city").options.length = 0;
+        		for (var i = 0; i < cityArray.length; ++i) {
+        			cityStr = cityArray[i];
+        			document.getElementById("city").options[i] = new Option(cityStr, cityStr);
+        		}
+        	}
+        	InitProvince();
+        	InitCity("请选择");
+        	document.getElementById("city").options[0] = new Option("城市", "");
+
+        	function InitProvince() {
+        		document.getElementById("province").options.length = 0;
+        		for (var i = 0; i < provinceArray.length; ++i) {
+        			provStr = provinceArray[i];
+        			document.getElementById("province").options[i] = new Option(GetNameFromString(provStr), GetIDFromString(provStr));
+        		}
+        		//    document.getElementById("province").options[18].selected=true;
+        	}
+        	window.onload = function() {
+        		var title = ' '
+        		var Button1 = document.querySelector('#Button1')
+                Button1.addEventListener('click',fn);
+        		function fn() {
+        			var sex, demand,uv;
+        			var sexInput = document.querySelectorAll('input[name="sex"]')
+        			var demandInput = document.querySelectorAll('input[name="uvin"]')
+        			var username = document.querySelector('#username').value
+        			var mobile = document.querySelector('#mobile').value
+        			var province = document.querySelector('#province').value
+        			var city = document.querySelector('#city').value
+        			var address = document.querySelector('#address').value
+        			var mailaddress = document.querySelector('#mailaddress').value
+        			var carType = document.querySelector('#model').value
+
+                    var uvin =  document.querySelectorAll('input[name="uvin"]')
+
+
+        			var regPhone = /^1(3|4|5|7|8)\d{9}$/
+        			var regEmail = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/
+        			for (var i = 0; i < sexInput.length; i++) {
+        				if (sexInput[i].checked) {
+        					sex = sexInput[i].value
+        				}
+        			}
+                    for (var i = 0; i < uvin.length; i++) {
+                        if (uvin[i].checked) {
+                            uv = uvin[i].value
+                        }
+                    }
+        			for (var i = 0; i < demandInput.length; i++) {
+        				if (demandInput[i].checked) {
+        					demand = demandInput[i].value
+        				}
+        			}
+        			if (!username) {
+        				mui.alert('请填写姓名')
+        				return
+        			}
+        			if (!sex) {
+        				mui.alert('请选择称谓')
+        				return
+        			}
+        			if (!mobile) {
+        				mui.alert('请填写手机号')
+        				return
+        			}
+        			if (!regPhone.test(mobile)) {
+        				mui.alert('手机号格式不正确')
+        				return
+        			}
+        			if (mailaddress && !regEmail.test(mailaddress)) {
+        				mui.alert('邮箱格式不正确')
+        				return
+        			}
+        			if (!carType) {
+        				mui.alert('请选择感兴趣的车型')
+        				return
+        			}
+                    var dataArr = [username,sex,mobile,province,city,address,mailaddress,carType,uv];
+
+
+                var source = getUrlParam("source");
+        		$.post("http://jaguar.fractalist.com.cn/Activity/Drive", { username: username, sex: sex, mobile: mobile, province: province, city: city, address: address, mailaddress: mailaddress, carType: carType, uv: uv, source: source }, function (data) {
+                    if (data.result) {
+                        state = true;
+                        mui.alert('提交成功');
+                    }
+                })
+                    console.log(dataArr)
+
+        		}
+        	}
+</script>
+
+</html>

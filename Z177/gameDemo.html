@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+		<title>够出色就上榜</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gameDemo.css"/>
+	</head>
+	<body>
+		<div id="gameDemoBg">
+			<img id="handImg" src="images/hand.png"/>
+			<div class="gameDemoTrue"></div>
+			<div class="gameDemoTrueClick"></div>
+		</div>
+		<!--   背景遮罩层       -->
+		<div class="prompt3">
+			<div class="promptBg"></div>
+			<img src="images/gameDemoPrompt.png"/>
+			<div class="gameDemoPromptTrue">
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.gameDemoTrueClick').bind('click',function(){
+			//1e3045paused
+			$('.gameDemoTrue').css('background','#1e3045');
+			$('#handImg').addClass('pause');
+			setTimeout(function(){
+				$('.prompt3').show();
+			},1000);
+		})
+		$('.gameDemoPromptTrue').bind('click',function(){
+			window.location.href = 'gameStart.html';
+		})
+		var score=-1;
+	</script>
+</html>
